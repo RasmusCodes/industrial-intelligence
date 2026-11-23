@@ -1,0 +1,47 @@
+ticker: KLAC
+document: KLAC_10-K_2026-08-06.txt
+description: KLA supplies process control, yield management and process-enabling equipment and services (inspection, metrology, data analytics, vacuum deposition and etch, PCB inspection) to semiconductor and electronics manufacturers. Services were about 23% of fiscal 2026 revenue (year ended June 30, 2026).
+segments:
+  - name: Semiconductor Process Control
+    sells: Inspection, metrology and data analytics products and related services for wafers, reticles and ICs, used to reach target yield.
+    end_markets: Memory and foundry/logic chipmakers; drivers include AI and HPC, EUV adoption, 2-nanometer nodes and advanced packaging.
+  - name: Specialty Semiconductor Process
+    sells: Advanced vacuum deposition and etching process tools (etch, plasma dicing, deposition).
+    end_markets: Specialty semiconductor makers, including MEMS, RF communication and power semiconductors for automotive and industrial applications.
+  - name: PCB and Component Inspection
+    sells: Equipment to inspect, test and measure PCBs, IC substrates and packaged ICs.
+    end_markets: Electronic device manufacturers; the PCB business forecast deteriorated, leading to goodwill impairments in fiscal 2024 and 2025.
+geography:
+  summary: International revenues were about 87% of fiscal 2026 revenue (89% in fiscal 2025 and 2024). Principal manufacturing is in the U.S., Singapore, Israel, China and Europe.
+  evidence:
+    - quote: "International revenues accounted for approximately 87% of our total revenues in the fiscal year ended June 30, 2026 and 89% of our total revenues in both of the fiscal years ended June 30, 2025 and 2024."
+    - quote: "A majority of our total revenues are derived from outside the U.S., and we maintain significant operations outside the U.S."
+    - quote: "Our principal manufacturing operations are located in the U.S., Singapore, Israel, China and various locations throughout Europe."
+customers:
+  summary: Leading semiconductor, semiconductor-related and electronic device manufacturers in Asia, the U.S. and Europe, with a highly concentrated customer base and heavy reliance on foundry/logic orders. Sales channel is direct sales and service subsidiaries and branches in major manufacturing regions.
+  concentration: One customer about 19% of total revenues in fiscal 2026 and 2025 (about 13% in fiscal 2024), primarily in Semiconductor Process Control.
+  evidence:
+    - quote: "In each of the fiscal years ended June 30, 2026 and 2025, one customer accounted for approximately 19 % of total revenues."
+    - quote: "Our customer base, particularly in the semiconductor industry, historically has been highly concentrated due to corporate consolidation, acquisitions and business closures."
+    - quote: "Our semiconductor customers generally operate in one or both of the major semiconductor device manufacturing markets: memory and foundry/logic."
+backlog:
+  measure: backlog
+  latest: $12.57 billion at June 30, 2026 (up from $7.86 billion at June 30, 2025).
+  horizon: not disclosed
+  summary: Backlog rose about 60% on AI infrastructure buildout demand, but the company says backlog does not give meaningful information about the timing of revenue and flags risk of order pushouts or cancellations.
+  evidence:
+    - quote: "Our backlog, primarily consisting of sales orders where written customer requests have been received, increased from $7.86 billion as of June 30, 2025, to $12.57 billion as of June 30, 2026, due to strong demand driven by the AI infrastructure buildout."
+    - quote: "Our backlog on any particular date does not provide meaningful information about the timing of future revenue recognition."
+    - quote: "The growth that we have experienced over the past few years has resulted in higher levels of backlog."
+pricing:
+  summary: Revenue is affected by average customer pricing and volume purchase agreement deferrals. Large customers have commercial negotiating leverage and the company may not pass cost inflation to them; U.S. tariffs raised cost of revenues.
+  evidence:
+    - quote: "Revenue is also impacted by average customer pricing, customer revenue deferrals associated with volume purchase agreements"
+    - quote: "may seek and, on occasion, receive pricing, payment, IP-related or other commercial terms that may have an adverse impact on our business and we may not be able to pass on the cost of inflation to our customers."
+    - quote: "The U.S. tariffs have increased our cost of revenues due to the increase in the cost of importing foreign sourced components to our U.S. facilities to build the products that we manufacture in the U.S."
+margin_drivers:
+  summary: Gross margin drivers named are revenue volume, product and service mix, manufacturing labor, overhead and efficiencies, and other service and manufacturing costs (tariffs, installation and warranty costs, inventory charges); DRAM chip shortages also raised costs.
+  evidence:
+    - quote: "Other service and manufacturing costs included higher installation and warranty costs and increased costs due to tariffs, partially offset by lower inventory-related charges in fiscal year 2026 compared to fiscal year 2025."
+    - quote: "Changes in gross margin from the mix of products and services sold reflect the impact of changes within the composition of product and service offerings."
+    - quote: "Recently, a few large suppliers have discontinued manufacturing certain DRAM chips that are incorporated in a number of our products, and the resulting shortage has caused a dramatic increase in the prices to acquire these chips."

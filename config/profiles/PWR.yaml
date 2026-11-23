@@ -1,0 +1,40 @@
+ticker: PWR
+document: PWR_10-K_2026-02-19.txt
+description: Quanta Services provides specialty contracting and infrastructure services for the electric power grid, power generation, large load centers such as data centers, communications and pipelines, mainly in the United States.
+segments:
+  - name: Electric
+    sells: Services for the electric power grid, power generation and large load center markets (includes renewable energy infrastructure)
+    end_markets: Utilities, renewable developers, technology companies, data center and other large load customers
+  - name: Underground and Infrastructure
+    sells: Infrastructure solutions for transportation, distribution, storage and processing of natural gas, oil and other products, and for large load centers
+    end_markets: Pipeline, gas utility and energy delivery customers, and large load center owners
+geography:
+  summary: Operations are primarily in the United States; foreign operations (mainly Canada and Australia) were about 7.0% of 2025 revenues, down from 8.7% in 2024 and 14.2% in 2023.
+  evidence:
+    - quote: "We operate primarily in the United States; however, we derived approximately 7.0%, 8.7% and 14.2% of our revenues from foreign operations, primarily in Canada and Australia, during the years ended December 31, 2025, 2024 and 2023."
+    - quote: "customers, which primarily include utilities, renewable energy developers, technology companies, communications providers, industrial companies and energy delivery companies located primarily in the United States, Canada and Australia."
+customers:
+  summary: Customers are utilities, renewable developers, technology companies, communications providers, industrial and energy delivery companies; work comes under master service agreements and fixed and non-fixed price contracts. Customer base is moderately concentrated.
+  concentration: "Largest customer 8% of 2025 consolidated revenues; ten largest customers 30%"
+  evidence:
+    - quote: "For the year ended December 31, 2025, our largest customer accounted for 8% of our consolidated revenues and our ten largest customers accounted for 30% of our consolidated revenues."
+    - quote: "Our services are typically provided pursuant to master service agreements (MSAs), repair and maintenance contracts and fixed price and non-fixed price construction and engineering contracts."
+backlog:
+  measure: both
+  latest: "Remaining performance obligations $23.76 billion and backlog $43.98 billion at December 31, 2025"
+  horizon: "66.1% of RPO expected to be recognized in the subsequent twelve months"
+  summary: RPO covers firm fixed-price orders and some unit-price work; backlog adds estimated orders under MSAs and short-term non-fixed price contracts.
+  evidence:
+    - quote: "Our remaining performance obligations and backlog were $23.76 billion and $43.98 billion as of December 31, 2025, representing increases of 41.8%, and 27.3% relative to December 31, 2024."
+    - quote: "with 66.1 % and 67.1 % expected to be recognized in the subsequent twelve months"
+pricing:
+  summary: A significant portion of revenue comes from unit price or fixed price agreements, where price is often a key factor in award; change orders and claims are recognized when a price adjustment is probable.
+  evidence:
+    - quote: "A significant portion of our revenues is currently derived from unit price or fixed price agreements, and price is often an important factor in the award of such agreements."
+    - quote: "In addition, we recognize amounts associated with change orders and/or claims as revenue when it is probable that the contract price will be adjusted and the amount of any such adjustment can be reasonably estimated."
+margin_drivers:
+  summary: Segment margins rose on higher revenue (fixed cost absorption) and mix of work including acquired businesses; in 2024 mix toward higher-margin emergency restoration helped. Tariffs and sourcing limits mainly threaten project timing.
+  evidence:
+    - quote: "primarily due to increased revenues, which contributed to higher levels of fixed cost absorption, as well as overall mix of work performed during the period including from the acquired businesses"
+    - quote: "The increase in operating income and operating margin for the year ended December 31, 2024 was primarily due to the increase in revenues and change in the overall mix of work, including an increase in higher margin emergency restoration services."
+    - quote: "We may continue to be impacted by sourcing restrictions, including, but not limited to, taxes, tariffs and duties, which may negatively impact project timing within certain of our markets in the future."

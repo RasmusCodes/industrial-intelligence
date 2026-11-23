@@ -1,0 +1,46 @@
+ticker: VRT
+document: VRT_10-K_2026-02-13.txt
+description: Vertiv designs, manufactures, installs and services critical digital infrastructure (power, thermal and related hardware, software and services) primarily for data centers, communication networks and commercial and industrial environments.
+segments:
+  - name: Americas
+    sells: Critical digital infrastructure hardware, software and services
+    end_markets: Data centers, communication networks, commercial and industrial customers in the Americas
+  - name: Asia Pacific
+    sells: Critical digital infrastructure hardware, software and services
+    end_markets: Data centers, communication networks, commercial and industrial customers in Asia Pacific
+  - name: Europe, Middle East & Africa
+    sells: Critical digital infrastructure hardware, software and services
+    end_markets: Data centers, communication networks, commercial and industrial customers in EMEA
+geography:
+  summary: Segments are geographic. 2025 net sales of $10,229.9 million were 62% Americas, 20% Asia Pacific and 18% EMEA (about $6.39B, $2.02B and $1.82B excluding intercompany sales).
+  evidence:
+    - quote: "We manage our business across three reportable segments based on our main geographic regions"
+    - quote: "of which 62% was transacted in the Americas; 20% was transacted in Asia Pacific; and 18% was transacted in Europe, Middle East & Africa."
+    - quote: "Excluding intercompany sales, net sales were $6,386.3 in the Americas, $2,019.2 in Asia Pacific and $1,824.4 in Europe, Middle East & Africa."
+customers:
+  summary: Customers are data center, communication network and commercial and industrial operators, reached directly and through channel partners, distributors, IT resellers and value-added retailers.
+  concentration: not disclosed
+  evidence:
+    - quote: "We design, manufacture and service critical digital infrastructure technology primarily for data centers, communication networks and commercial and industrial environments."
+    - quote: "We also utilize a robust network of channel partners, distributors, IT resellers, and value-added retailers."
+backlog:
+  measure: backlog
+  latest: "$15.0 billion combined order backlog at December 31, 2025 (vs $7.2 billion at December 31, 2024)"
+  horizon: "Majority considered firm and expected to ship within the next 12 to 18 months (no exact share)"
+  summary: Backlog roughly doubled year over year; the filing cautions it is not necessarily indicative of future net sales.
+  evidence:
+    - quote: "estimated combined order backlog was approximately $15.0 billion and $7.2 billion, respectively."
+    - quote: "The majority of the combined backlog as of December 31, 2025 is considered firm and is expected to be shipped within the next 12 to 18 months."
+    - quote: "The backlog consists of product and services for which a customer purchase order or purchase commitment has been received and which has not yet been delivered."
+pricing:
+  summary: The company is advancing a pricing plan and notes that, because of its large backlog, pricing changes take longer to show in results. Competition is on reliability, quality, price, service and relationships; tariffs and input costs have risen.
+  evidence:
+    - quote: "We continue to take action to enhance our supply chain, such as qualifying new suppliers, and advancing our pricing plan."
+    - quote: "Also, due to our large backlog, pricing changes may take longer to be reflected in our financial results."
+    - quote: "In the past few years, we experienced significant increases in material, freight and labor costs and custom duties and tariffs."
+margin_drivers:
+  summary: Consolidated gross margin was 36.3% in 2025 vs 36.6% in 2024. The filing names operational leverage, cost improvement actions and geographic mix as drivers of a segment margin increase, and product/service mix, inefficiencies and capacity build-out as drivers of margin erosion in another.
+  evidence:
+    - quote: "Gross profit was $3,715.2 in 2025, or 36.3% of sales, compared to $2,934.2, or 36.6% of sales in 2024."
+    - quote: "Margin increased primarily driven by operational leverage, cost improvement actions, and geographical mix."
+    - quote: "Margin erosion was primarily due to the mix of product and service sales, operational inefficiencies, and increased capacity to support future global demand."

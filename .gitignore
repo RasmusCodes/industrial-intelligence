@@ -1,0 +1,10 @@
+# downloaded and built data (rebuild with scripts/run_all.py --fetch)
+/data/
+# local virtual environment and caches
+/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+# scratch
+/scratch/

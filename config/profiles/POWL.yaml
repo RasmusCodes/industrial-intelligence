@@ -1,0 +1,40 @@
+ticker: POWL
+document: POWL_10-K_2026-11-17.txt
+description: Powell develops, designs, manufactures and services custom-engineered electrical equipment and systems that distribute, control and monitor electrical energy, sold mainly to oil and gas and petrochemical, electric utility, and commercial and industrial customers (fiscal year ends September 30).
+segments:
+  - name: Powell (one reportable segment)
+    sells: Custom-engineered switchgear and power distribution systems, motor and transformer protection, spare parts, retrofit components and services
+    end_markets: Oil and gas and petrochemical, electric utility (generation and distribution), and commercial and other industrial (commercial construction, data centers, metals and mining, pulp and paper)
+geography:
+  summary: Fiscal 2026 revenue was $1,026.2 million domestic and $230.0 million international; projects outside the US were about 18% of consolidated revenue.
+  evidence:
+    - quote: "Revenues associated with projects located outside of the United States accounted for approximately 18% of our consolidated revenues in Fiscal 2026."
+    - quote: "Domestic revenue increased by 17%, or $146.0 million, to $1,026.2 million, while international revenue increased 3%, or $5.9 million, to $230.0 million in Fiscal 2026."
+customers:
+  summary: A wide variety of customers and governmental agencies across industrial, utility and commercial markets, with work typically awarded in competitive bids. No single customer exceeded 10% of revenue.
+  concentration: "No single customer above 10% of consolidated revenues in Fiscal 2026 or Fiscal 2025"
+  evidence:
+    - quote: "In both Fiscal 2026 and Fiscal 2025, no single customer accounted for more than 10% of our consolidated revenues."
+    - quote: "We market and sell our products and services, which are typically awarded in competitive bid situations, to a wide variety of customers and governmental agencies spanning diverse markets and geographic regions."
+    - quote: "In the commercial and other industrial markets, we provide products and services to customers engaged in commercial construction, data centers, metals and mining, pulp and paper, as well as other industrial applications."
+backlog:
+  measure: backlog
+  latest: "$2.7 billion at September 30, 2026 (vs $1.4 billion at September 30, 2025)"
+  horizon: "About $1.3 billion (roughly 48%) expected to be recognized in the fiscal year ending September 30, 2027"
+  summary: Backlog nearly doubled and excludes service and maintenance contracts billed as performed; it is recognized as remaining performance obligations are completed.
+  evidence:
+    - quote: "Our backlog increased by $1.3 billion to $2.7 billion at September 30, 2026, compared to $1.4 billion at September 30, 2025."
+    - quote: "We anticipate that approximately $1.3 billion of Fiscal 2026 ending backlog will be recognized as revenue during our fiscal year ending September 30, 2027."
+    - quote: "Our backlog does not include service and maintenance-type contracts for which we have the right to invoice as services are performed."
+pricing:
+  summary: Projects are priced through competitive bids; the company manages pricing, delivery schedules and bid validity dates and uses contract pricing adjustments, estimating and hedging to manage commodity volatility. Fiscal 2026 was described as a stable pricing environment.
+  evidence:
+    - quote: "In response to the increased cost environment and supply chain challenges, we strive to effectively manage our product pricing, delivery schedules and bid validity dates with our customers, as well as improve factory efficiencies and project execution."
+    - quote: "While the cost outlook for commodities used in the production of our products is not certain, we believe we can manage this volatility through contract pricing adjustments, material-cost predictive estimating, hedging and by active pursuit of internal cost reduction efforts."
+    - quote: "The competitive factors used during bid evaluation by our customers vary from project to project and may include technical support and application expertise, engineering and manufacturing capabilities, equipment rating, delivered value, scheduling and price."
+margin_drivers:
+  summary: Gross margin rose to 31% in Fiscal 2026 from 29%, driven by higher revenue, volume leverage, product mix and strong project execution in a stable pricing environment. Tariffs are flagged as a risk; no quantified tariff effect found.
+  evidence:
+    - quote: "Gross profit as a percentage of revenue increased to 31% in Fiscal 2026, as compared to 29% in Fiscal 2025."
+    - quote: "The increase in gross profit was primarily driven by higher revenues, as well as improved gross profit margin resulting from favorable volume leverage and product mix, as well as strong project execution in a stable pricing environment."
+    - quote: "Additional restrictions or economic disincentives on United States or international trade such as significant increases in tariffs on goods could adversely impact our business."

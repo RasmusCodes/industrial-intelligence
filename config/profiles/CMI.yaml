@@ -1,0 +1,52 @@
+ticker: CMI
+document: CMI_10-K_2026-02-10.txt
+description: Cummins designs, manufactures, distributes and services engines, power generation systems, drivetrain and aftertreatment components, and electrified power systems. It sells to OEMs, distributors, dealers and other customers worldwide.
+segments:
+  - name: Engine
+    sells: Diesel, natural gas and gasoline engines (15 liters and smaller) and associated parts.
+    end_markets: Heavy-duty truck, medium-duty truck and bus, light-duty automotive (pick-up and light commercial vehicle) and off-highway markets such as construction, agriculture, mining, marine, rail, oil and gas and defense.
+  - name: Components
+    sells: Axles, drivelines, brakes and suspension, aftertreatment systems, turbochargers, fuel systems, valvetrain technologies, automated transmissions and electronics.
+    end_markets: Commercial vehicle and industrial applications, OEM first fit and retrofit customers, and aftermarket sold to OEM dealers, independent distributors and service garages.
+  - name: Distribution
+    sells: Wholesaling of engines, generator sets and service parts, plus service and repair on Cummins products and aftermarket support for Accelera.
+    end_markets: Customers and certified dealers worldwide through seven geographic regions; the segment is the primary sales, service and support channel.
+  - name: Power Systems
+    sells: Standby and prime power generators, engines (16 liters and larger) for generator sets and industrial applications, alternators and other power components.
+    end_markets: Highly diversified customer groups; industrial uses include mining, oil and gas, marine, rail and defense; 2025 growth was in power generation, especially data center and commercial markets.
+  - name: Accelera
+    sells: Electrified power systems with components and subsystems, including battery and electric powertrain technologies.
+    end_markets: Highly diversified, multiple end markets as they adopt electric solutions; segment is in early stages of commercializing.
+geography:
+  summary: International sales (excluding the U.S. and Canada) were 40% of 2025 net sales versus 39% in 2024. In 2025 U.S. and Canada sales declined 3% while international sales rose 2%, led by China and Europe.
+  evidence:
+    - quote: "Sales to international markets (excluding the U.S. and Canada), based on location of customers, were 40 percent of total net sales in 2025, compared with 39 percent of total net sales in 2024."
+    - quote: "International sales (excludes the U.S. and Canada) improved by 2 percent, primarily due to higher sales in China and Europe, partially offset by lower sales in Latin America."
+    - quote: "China, India, Europe, Asia Pacific, Latin America, the Middle East and Africa are our largest geographic markets outside of North America"
+customers:
+  summary: Thousands of customers worldwide, with a few large truck OEMs under long-term supply agreements (PACCAR, Traton, Daimler, Stellantis); distribution through a wholly-owned, partially-owned and independent distributor and dealer network.
+  concentration: PACCAR 13% of 2025 consolidated net sales (about $4.4 billion; 16% in 2024 and 2023), the only customer above 10%; PACCAR, Traton, Daimler and Stellantis together 31% of 2025 net sales.
+  evidence:
+    - quote: "PACCAR is our largest customer, accounting for 13 percent of our consolidated net sales in 2025, 16 percent in 2024 and 16 percent in 2023."
+    - quote: "Collectively, our net sales to these four customers, including PACCAR, were 31 percent of our consolidated net sales in 2025, 36 percent in 2024 and 37 percent in 2023."
+    - quote: "We sell our products to original equipment manufacturers (OEMs), distributors, dealers and other customers worldwide."
+backlog:
+  measure: not disclosed
+  latest: not disclosed
+  horizon: not disclosed
+  summary: The 10-K gives no backlog amount. It says much of the business runs on open purchase orders that are not considered firm, and that data center product demand extends six to eight quarters.
+  evidence:
+    - quote: "Many of these open orders are historically subject to month-to-month releases and are subject to cancellation on reasonable notice without cancellation charges and therefore are not considered firm."
+    - quote: "We also have strong demand for our data center products extending out six to eight quarters."
+pricing:
+  summary: Prices follow contractual time frames with pricing adjustment provisions, but timing of commodity cost increases can prevent timely pass-through. In 2025 non-tariff pricing (light-duty automotive engine launches) and customer tariff recoveries helped revenue, and favorable pricing lifted Engine, Distribution and Power Systems EBITDA; net tariff impact was immaterial.
+  evidence:
+    - quote: "Our businesses establish prices with our customers in accordance with contractual time frames; however, the timing of material and commodity market price increases may prevent us from passing these additional costs on to our customers through timely pricing actions."
+    - quote: "Power Systems segment EBITDA increased $514 million, primarily due to favorable pricing and higher volumes, partially offset by net tariff costs."
+    - quote: "The net impact of tariff costs and related recoveries was immaterial for the year ended December 31, 2025."
+margin_drivers:
+  summary: Gross margin rose 0.6 points in 2025 on power generation growth (data center and commercial) and favorable non-tariff pricing, offset by weaker on-highway truck demand and lost Atmus sales. Segment EBITDA moves cite volume, mix, material costs, pricing, product coverage costs and compensation expense.
+  evidence:
+    - quote: "Gross margin increased $77 million and increased 0.6 points as a percentage of sales."
+    - quote: "Engine segment EBITDA decreased $271 million primarily due to lower volumes, unfavorable mix, increased product coverage costs and higher material costs, partially offset by favorable pricing."
+    - quote: "Distribution segment EBITDA increased $430 million, primarily due to increased power generation volumes in North America, improved mix, favorable pricing, decreased compensation expenses, lower material costs and improved operational leverage."

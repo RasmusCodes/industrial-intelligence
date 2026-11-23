@@ -1,0 +1,49 @@
+ticker: CAT
+document: CAT_10-K_2026-02-13.txt
+description: Caterpillar makes construction and mining machinery, engines, turbines, locomotives and related parts and services, sold mainly through an independent dealer network, and also runs a captive finance business.
+segments:
+  - name: Construction Industries
+    sells: Machinery for infrastructure and building construction applications
+    end_markets: Heavy and general construction, rental, quarry and aggregates, and mining
+  - name: Resource Industries
+    sells: Surface and underground mining equipment, work tools, machinery components, wear and maintenance parts, plus fleet management, autonomy and safety technology and services
+    end_markets: Mining (copper, iron ore, coal, oil sands, gold), heavy construction, quarry and aggregates
+  - name: Power & Energy
+    sells: Reciprocating engines, turbines and turbine-related services, electric power generation systems, locomotives and rail products and services
+    end_markets: Oil and gas, power generation (including data center applications), marine, rail and industrial applications
+  - name: Financial Products
+    sells: Retail and wholesale financing, insurance and risk management products through Cat Financial and Insurance Services
+    end_markets: Caterpillar customers and dealers purchasing or leasing Caterpillar equipment
+geography:
+  summary: Sales are worldwide, through 41 US and 109 non-US dealers serving 190 countries. In 2025 North America sales rose 6 percent and EAME 4 percent, while Asia/Pacific fell 2 percent; absolute regional dollar amounts are not quoted here.
+  evidence:
+    - quote: "We distribute our machines principally through a worldwide organization of dealers (dealer network), 41 located in the United States and 109 located outside the United States, serving 190 countries."
+    - quote: "North America sales increased 6 percent due to higher sales volume, partially offset by unfavorable price realization."
+    - quote: "EAME sales increased 4 percent mainly due to higher sales volume and favorable currency impacts related to the euro, partially offset by unfavorable price realization."
+    - quote: "Asia/Pacific sales decreased 2 percent primarily due to unfavorable currency impacts related to the Australian dollar, and lower sales volume."
+customers:
+  summary: Machines are sold principally through independent dealers; engines also go to other manufacturers (OEMs) and through distributors; turbines and locomotives are sold directly to end customers by company sales forces.
+  concentration: not disclosed
+  evidence:
+    - quote: "We sell finished products primarily through an independent dealer network and directly to OEMs and are subject to risks relating to their inventory management decisions and operational and sourcing practices."
+    - quote: "We sell some products, primarily turbines and locomotives, directly to end customers through sales forces employed by the company."
+backlog:
+  measure: backlog
+  latest: "$51.2 billion at December 31, 2025 (vs $30.0 billion at December 31, 2024)"
+  horizon: "About $31.9 billion (roughly 62%) expected to be filled in 2026, derived as $51.2 billion less $19.3 billion not expected to be filled in 2026"
+  summary: Backlog believed to be firm rose to $51.2 billion, with increases across the primary segments and the largest in Power & Energy.
+  evidence:
+    - quote: "The dollar amount of backlog believed to be firm was approximately $51.2 billion at December 31, 2025 and $30.0 billion at December 31, 2024."
+    - quote: "Of the total backlog at December 31, 2025, approximately $19.3 billion was not expected to be filled in 2026."
+    - quote: "Compared with year-end 2024, the order backlog increased across the primary segments, with the largest increase in Power & Energy."
+pricing:
+  summary: Price realization was unfavorable in 2025 (including in North America and EAME); the company expects favorable price realization of about 2 percent of sales and revenues in 2026. Higher tariffs were reflected in manufacturing costs.
+  evidence:
+    - quote: "The strong backlog coupled with healthy end markets supports our expectations for sales volume growth in all three primary segments, as well as favorable price realization of about 2 percent of sales and revenues."
+    - quote: "The decrease was mainly due to unfavorable manufacturing costs and unfavorable price realization, partially offset by the profit impact of higher sales volume."
+margin_drivers:
+  summary: Operating profit margin fell to 16.5 percent in 2025 from 20.2 percent, driven by unfavorable manufacturing costs (largely tariffs) and unfavorable price realization, partly offset by higher volume. The company expects tariff impact of about $2.6 billion in 2026.
+  evidence:
+    - quote: "Operating profit margin was 16.5 percent in 2025, compared with 20.2 percent in 2024."
+    - quote: "Unfavorable manufacturing costs largely reflected the impact of higher tariffs."
+    - quote: "Based on the incremental tariffs announced in 2025 and in place by January 29, 2026, we expect the impact from tariffs to be around $2.6 billion in 2026, which is $800 million higher than incurred in 2025."

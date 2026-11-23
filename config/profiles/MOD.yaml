@@ -1,0 +1,43 @@
+ticker: MOD
+document: MOD_10-K_2026-05-27.txt
+description: Modexus Solutions (formerly Modine Manufacturing) sells thermal management solutions, systems, services and components for data center, commercial HVAC&R, commercial vehicle, off-highway and other industrial markets (fiscal year ends March 31).
+segments:
+  - name: Climate Solutions
+    sells: Data center cooling solutions, HVAC&R heat exchangers and energy-efficient climate-controlled solutions, and anti-corrosive coatings
+    end_markets: Hyperscale and colocation data centers, commercial HVAC&R and buildings (reorganized into Data Centers and Commercial HVAC segments effective April 1, 2026)
+  - name: Performance Technologies
+    sells: Heat exchange and thermal products and solutions for vehicular, stationary power and industrial applications (Heavy-Duty Equipment and On-Highway Applications groups)
+    end_markets: Commercial vehicle, off-highway, power generation and zero-emission and hybrid vehicles
+geography:
+  summary: Operations span North America, Europe, Asia and India; US export sales were 6 percent of net sales in fiscal 2026. Management expects strong data center growth in North America and Asia, and power generation demand grew in North America, Europe and India.
+  evidence:
+    - quote: "Export sales from the U.S. to foreign countries, as a percentage of consolidated net sales, were 6 percent in fiscal 2026 and 7 percent in both fiscal 2025 and 2024."
+    - quote: "In North America, we expect the data center markets will experience strong growth, benefitting from significant capital investments in data center infrastructure in the U.S. by both Hyperscale and NeoCloud data center providers."
+    - quote: "In Asia, we anticipate the data center markets will experience strong growth in fiscal 2027, driven by AI and high-performance computing demand."
+customers:
+  summary: Customers are concentrated in data center, commercial vehicle and off-highway markets and are served mainly through long-term sales agreements typically lasting three to five years.
+  concentration: "Ten largest customers 49 percent of fiscal 2026 net sales"
+  evidence:
+    - quote: "Our top five customers, in terms of sales, are in the data center, commercial vehicle, and off-highway markets and our ten largest customers accounted for 49 percent of our net sales in fiscal 2026."
+    - quote: "The higher Climate Solutions segment sales included significant sales growth to hyperscale and colocation data center customers and $119 million of incremental sales from businesses we acquired during fiscal 2026."
+    - quote: "When it is in the mutual interest of Modine and our customers, we utilize long-term sales agreements to minimize investment risks and provide the customer with a proven source of competitively-priced products."
+backlog:
+  measure: not disclosed
+  latest: not disclosed
+  horizon: not disclosed
+  summary: The Backlog of Orders section gives no backlog amount; it says segment teams manage production capacity based on expected sales volume.
+  evidence:
+    - quote: "Our operating segments maintain their own inventories and production schedules."
+    - quote: "We believe that our segment teams can manage their operations and production capacity effectively and efficiently based upon expected sales volume in fiscal 2027 and beyond."
+pricing:
+  summary: Long-term customer contracts include, when possible, prospective price adjustments tied to key raw material costs, with a lag of three months to a year; metals pricing with suppliers is adjusted monthly or quarterly.
+  evidence:
+    - quote: "When possible, we have included provisions within our long-term customer contracts which provide for adjustments to customer prices, on a prospective basis, based upon increases and decreases in the cost of key raw materials."
+    - quote: "In addition, there can often be a three-month to one-year lag until the time that the price adjustments take effect."
+    - quote: "We typically adjust metals pricing with our raw material suppliers on a monthly basis and our major fabricated component suppliers on a quarterly basis."
+margin_drivers:
+  summary: Fiscal 2026 gross margin fell 190 bp to 23.0 percent on operating inefficiencies from the rapid Data Centers expansion, higher material costs and the absence of prior-year pricing settlements and sales tax credits, even as volume rose 23 percent.
+  evidence:
+    - quote: "Gross margin declined 190 basis points to 23.0 percent and was negatively impacted by temporary operating inefficiencies associated with the rapid expansion of our Data Centers business and higher material costs in both of our operating segments."
+    - quote: "primarily due to temporary operating inefficiencies, higher material costs, and the absence of commercial pricing settlements and sales tax credits, which favorably impacted the prior year"
+    - quote: "Cost of sales increased $510 million, or 26 percent, primarily due to the higher sales volume."

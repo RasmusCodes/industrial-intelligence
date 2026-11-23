@@ -1,0 +1,45 @@
+ticker: GEV
+document: GEV_10-K_2026-01-29.txt
+description: GE Vernova designs, manufactures, delivers and services technologies for the electric power system, including gas turbines, wind turbines and grid equipment, selling to utilities, power producers, industrial and government customers worldwide.
+segments:
+  - name: Power
+    sells: Gas, steam, nuclear and related power generation equipment and services
+    end_markets: Power generation, industrial, government and other customers worldwide, with demand from hyperscalers and data centers
+  - name: Wind
+    sells: Onshore and offshore wind turbines and blades, and related services
+    end_markets: Wind power developers and utilities
+  - name: Electrification
+    sells: Grid solutions, power conversion and storage, and electrification software for transmission, distribution, conversion and storage of electricity
+    end_markets: Utilities, grid operators and industrial customers
+geography:
+  summary: Revenues are classified by region of sale. In 2025 the US was $17,341 million of $38,068 million total; non-US was $20,728 million (Europe $7,594M, Asia $4,629M, Middle East and Africa $5,389M, rest of Americas $3,116M).
+  evidence:
+    - quote: "Revenues are classified according to the region to which equipment and services are sold."
+    - quote: "presented separately from the remainder of the Americas."
+customers:
+  summary: Customers are power generators, utilities, industrial and government buyers; the Power segment cites hyperscaler and data center demand. No concentration figure found.
+  concentration: not disclosed
+  evidence:
+    - quote: "Our Power segment serves power generation, industrial, government, and other customers worldwide with products and services"
+    - quote: "power to support industrialization, grid stability needs, and rising electricity demand from hyperscalers and data centers"
+backlog:
+  measure: remaining performance obligations
+  latest: "RPO of $150.2 billion at December 31, 2025 (vs $119.0 billion at December 31, 2024)"
+  horizon: "Equipment RPO ($64.2B): 37% within 1 year; Services RPO ($86.0B): 17% within 1 year (implies roughly 26% of total RPO, derived)"
+  summary: RPO is the company's backlog measure; equipment RPO converts faster than long-dated service contracts.
+  evidence:
+    - quote: "RPO was $150.2 billion and $119.0 billion as of December 31, 2025 and 2024 , respectively."
+    - quote: "RPO, a measure of backlog, includes unfilled firm and unconditional customer orders for equipment and services, excluding any purchase"
+    - quote: "Equipment-related RPO of $ 64,245 million of which 37 % , 69 % , and 97 % is expected to be recognized within 1 , 2 , and 5 years ,"
+    - quote: "Services-related RPO of $ 85,993 million of which 17 % , 52 % , 77 % , and 91 % is expected to be recognized within 1 , 5 , 10 , and 15"
+pricing:
+  summary: Pricing and contract terms are adjusted for demand, inflation and industry dynamics; favorable price was a named driver of 2025 revenue and EBITDA growth in Power and Electrification. Tariffs are mitigated through supply chain and US manufacturing moves.
+  evidence:
+    - quote: "We adjust pricing and contractual terms of our products and services based on demand, inflation, and industry dynamics."
+    - quote: "Segment EBITDA increased $0.7 billion organically*, primarily due to volume, favorable price, and productivity at Grid Solutions."
+    - quote: "mitigate the impact of tariffs, we are diversifying our supply chains, increasing U.S. manufacturing capabilities, and engaging with policy"
+margin_drivers:
+  summary: Favorable price, volume and productivity drove segment EBITDA gains in Power (Gas and Steam) and Electrification (Grid Solutions), partly offset by investment expenses and inflation; Offshore Wind remains pressured by project costs and execution timelines.
+  evidence:
+    - quote: "Segment EBITDA increased $0.4 billion ( 18% ) organically*, primarily at Gas Power and Steam Power due to favorable price and increased"
+    - quote: "At Offshore Wind, we continue to experience pressure related to our project costs and execution timelines, as we deliver on our existing"

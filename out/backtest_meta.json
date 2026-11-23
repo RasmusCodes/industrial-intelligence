@@ -1,0 +1,25 @@
+{
+ "eval_start": "2016-01-01",
+ "holdout_start": "2021-01-01",
+ "n_panel_rows": 2409,
+ "companies": [
+  "AMAT",
+  "BE",
+  "CAT",
+  "CMI",
+  "ETN",
+  "GEV",
+  "HUBB",
+  "KLAC",
+  "LRCX",
+  "MOD",
+  "MTZ",
+  "NVT",
+  "POWL",
+  "PWR",
+  "ROK",
+  "URI",
+  "VRT"
+ ],
+ "last_target_quarter": "2026-09-30"
+}

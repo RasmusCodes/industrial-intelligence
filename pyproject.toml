@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indintel"
+version = "0.1.0"
+description = "Industrial intelligence: public operational data mapped to point-in-time forecasts of industrial company fundamentals"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "RasmusCodes" }]
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "statsmodels>=0.14",
+    "scikit-learn>=1.5",
+    "requests>=2.31",
+    "openpyxl>=3.1",
+    "python-calamine>=0.2",
+    "pyyaml>=6.0",
+    "pyarrow>=15",
+    "lxml>=5.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["indintel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

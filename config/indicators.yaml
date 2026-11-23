@@ -1,0 +1,652 @@
+# Operational indicator registry.
+#
+# Every series the models may use is declared here before any test is run. Fields:
+#   id            stable identifier used by the mapping (config/companies.yaml) and the models
+#   source        connector (indintel/sources/<source>.py)
+#   params        connector-specific selection
+#   freq          native frequency of the processed series (M monthly, Q quarterly)
+#   agg           how months combine into a quarter: sum (flows), mean (rates, indexes, SAAR), last (stocks)
+#   vintage_kind  vintage | filing | event | lagged (see indintel/store.py); lagged series also give
+#                 pub_lag_days = days after period end when the value is assumed public
+#   link          the economic channel from the series to company revenue, orders or margins
+#
+# Sources are ranked in docs/DATA_SOURCES.md by availability, reliability and economic relevance.
+
+indicators:
+
+  # ---------------------------------------------------------------- Census M3 manufacturers' survey (ALFRED vintages)
+  - id: m3_elec_equip_orders
+    name: New orders, electrical equipment manufacturing (NAICS 3353)
+    source: alfred
+    params: {fred_id: A35CNO}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [grid, dc, power]
+    link: US factory orders for transformers, switchgear, motors and generators; the industry aggregate behind
+      Eaton, Hubbell, Powell and GE Vernova's electrification products.
+  - id: m3_elec_equip_unfilled
+    name: Unfilled orders, electrical equipment manufacturing
+    source: alfred
+    params: {fred_id: A35CUO}
+    freq: M
+    agg: last
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [grid, dc, power]
+    link: Industry backlog of electrical equipment; rising unfilled orders signal lead times and pricing power.
+  - id: m3_elec_equip_shipments
+    name: Shipments, electrical equipment manufacturing
+    source: alfred
+    params: {fred_id: A35CVS}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [grid, dc, power]
+    link: Industry revenue proxy for electrical equipment; coincident with company sales.
+  - id: m3_hvac_orders
+    name: New orders, ventilation, heating, air-conditioning and refrigeration equipment
+    source: alfred
+    params: {fred_id: A33HNO}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [dc]
+    link: Thermal-management demand (data center cooling for Vertiv and Modine) within a broader HVAC aggregate.
+  - id: m3_construction_mach_orders
+    name: New orders, construction machinery manufacturing
+    source: alfred
+    params: {fred_id: A33CNO}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: US orders for excavators, loaders, dozers and the like; Caterpillar Construction Industries' home market.
+  - id: m3_construction_mach_shipments
+    name: Shipments, construction machinery manufacturing
+    source: alfred
+    params: {fred_id: A33CVS}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Industry sales of construction machinery; coincident with Caterpillar's construction segment.
+  - id: m3_mining_mach_orders
+    name: New orders, mining, oil and gas field machinery
+    source: alfred
+    params: {fred_id: A33DNO}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Mining and oilfield equipment orders; Caterpillar Resource Industries and part of Energy & Transportation.
+  - id: m3_industrial_mach_orders
+    name: New orders, industrial machinery manufacturing (incl. semiconductor machinery)
+    source: alfred
+    params: {fred_id: A33ENO}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [semicap, automation]
+    link: NAICS 3332 includes semiconductor manufacturing machinery made in the US.
+  - id: m3_machinery_unfilled
+    name: Unfilled orders, machinery
+    source: alfred
+    params: {fred_id: A33SUO}
+    freq: M
+    agg: last
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [machinery, power, automation]
+    link: Aggregate machinery backlog including turbines and engines.
+  - id: m3_core_capex_orders
+    name: New orders, nondefense capital goods excluding aircraft
+    source: alfred
+    params: {fred_id: NEWORDER}
+    freq: M
+    agg: sum
+    unit: USD m, seasonally adjusted
+    vintage_kind: vintage
+    sectors: [automation, machinery, grid]
+    link: The standard business-investment orders gauge; broad demand backdrop for industrial equipment.
+
+  # ---------------------------------------------------------------- Census construction spending (ALFRED vintages)
+  - id: cons_total
+    name: Total construction spending
+    source: alfred
+    params: {fred_id: TTLCONS}
+    freq: M
+    agg: mean
+    unit: USD m, seasonally adjusted annual rate
+    vintage_kind: vintage
+    sectors: [machinery, construction]
+    link: Construction activity drives machine utilisation, fleet replacement and rental demand.
+  - id: cons_nonres
+    name: Nonresidential construction spending
+    source: alfred
+    params: {fred_id: TLNRESCONS}
+    freq: M
+    agg: mean
+    unit: USD m, SAAR
+    vintage_kind: vintage
+    sectors: [machinery, construction, grid]
+    link: Commercial, industrial and infrastructure building; electrical content per project is high.
+  - id: cons_highway
+    name: Highway and street construction spending
+    source: alfred
+    params: {fred_id: TLHWYCONS}
+    freq: M
+    agg: mean
+    unit: USD m, SAAR
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Earthmoving and paving demand (Caterpillar construction equipment, United Rentals).
+  - id: cons_manufacturing
+    name: Private manufacturing construction spending
+    source: alfred
+    params: {fred_id: PRMFGCONS}
+    freq: M
+    agg: mean
+    unit: USD m, SAAR
+    vintage_kind: vintage
+    sectors: [construction, grid, machinery]
+    link: Factory construction (chip fabs, battery plants) needs electrical gear and site equipment.
+  - id: cons_power
+    name: Power construction spending
+    source: alfred
+    params: {fred_id: TLPWRCONS}
+    freq: M
+    agg: mean
+    unit: USD m, SAAR
+    vintage_kind: vintage
+    sectors: [grid, power, construction]
+    link: Generation, transmission and distribution construction; Quanta and MasTec's core market.
+  - id: housing_starts
+    name: Housing starts
+    source: alfred
+    params: {fred_id: HOUST}
+    freq: M
+    agg: mean
+    unit: thousand units, SAAR
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Residential construction demand for compact and general construction equipment.
+
+  # ---------------------------------------------------------------- prices (ALFRED vintages)
+  - id: ppi_transformers
+    name: PPI, electric power and specialty transformers
+    source: alfred
+    params: {fred_id: PCU335311335311}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [grid, dc]
+    link: Output price of transformers; pricing power in grid equipment under tight supply.
+  - id: ppi_switchgear
+    name: PPI, switchgear and switchboard apparatus
+    source: alfred
+    params: {fred_id: PCU335313335313}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [grid, dc]
+    link: Output price of switchgear (Eaton, Powell, Schneider, ABB).
+  - id: ppi_turbines
+    name: PPI, turbine and turbine generator set units
+    source: alfred
+    params: {fred_id: PCU333611333611}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [power]
+    link: Output price of turbines and generator sets (GE Vernova gas power, Caterpillar Solar Turbines).
+  - id: ppi_construction_mach
+    name: PPI, construction machinery
+    source: alfred
+    params: {fred_id: PCU333120333120}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Price realisation on construction equipment, a stated Caterpillar margin driver.
+  - id: ppi_iron_steel
+    name: PPI, iron and steel
+    source: alfred
+    params: {fred_id: WPU101}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery, grid, power]
+    link: Main material input cost for machinery and electrical equipment.
+  - id: copper_price
+    name: Global price of copper
+    source: alfred
+    params: {fred_id: PCOPPUSDM}
+    freq: M
+    agg: mean
+    unit: USD per tonne
+    vintage_kind: vintage
+    sectors: [grid, machinery, dc]
+    link: Input cost for windings, cables and busbars; also a mining-capex signal for Resource Industries.
+
+  # ---------------------------------------------------------------- production and freight (ALFRED vintages)
+  - id: ip_mining
+    name: Industrial production, mining
+    source: alfred
+    params: {fred_id: IPMINE}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: Mining activity drives haul-truck hours, parts and services and fleet replacement.
+  - id: ip_drilling
+    name: Industrial production, drilling oil and gas wells
+    source: alfred
+    params: {fred_id: IPN213111N}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery, power]
+    link: Well-site engines, compression and gas turbines (Caterpillar Energy & Transportation, Cummins).
+  - id: ip_semis
+    name: Industrial production, semiconductors and other electronic components
+    source: alfred
+    params: {fred_id: IPG3344S}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [semicap]
+    link: Chip output; utilisation drives tool demand with a lag.
+  - id: ip_acm_machinery
+    name: Industrial production, agriculture, construction and mining machinery
+    source: alfred
+    params: {fred_id: IPG3331S}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: US output of heavy machinery; production volume behind Caterpillar's US plants.
+  - id: ip_elec_equip
+    name: Industrial production, electrical equipment
+    source: alfred
+    params: {fred_id: IPG3353S}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [grid]
+    link: Physical output of transformers, switchgear and motors in the US.
+  - id: freight_tsi
+    name: Freight transportation services index
+    source: alfred
+    params: {fred_id: TSIFRGHT}
+    freq: M
+    agg: mean
+    unit: index
+    vintage_kind: vintage
+    sectors: [machinery]
+    link: For-hire freight volume (truck, rail, pipeline, water, air); a coincident gauge of goods activity.
+
+  # ---------------------------------------------------------------- SEC filings of customer panels
+  - id: hyperscaler_capex
+    name: Hyperscaler capital expenditure (MSFT, GOOGL, AMZN, META)
+    source: sec_panel
+    params: {panel: hyperscalers, item: capex}
+    freq: Q
+    agg: sum
+    unit: USD
+    vintage_kind: filing
+    sectors: [dc, grid, power]
+    link: Cash spent on data centers and servers by the four largest cloud operators; the funding source of
+      data center power and cooling orders.
+  - id: utility_capex
+    name: Utility capital expenditure (22 US investor-owned utilities)
+    source: sec_panel
+    params: {panel: utilities, item: capex}
+    freq: Q
+    agg: sum
+    unit: USD
+    vintage_kind: filing
+    sectors: [grid, construction, power]
+    link: Transmission, distribution and generation investment; buys transformers, switchgear, poles,
+      connectors and construction labour.
+
+  # ---------------------------------------------------------------- Census data center construction (latest vintage only)
+  - id: cons_data_center
+    name: Private construction spending, data centers
+    source: census_c30
+    params: {column: Data center}
+    freq: M
+    agg: mean
+    unit: USD m, SAAR
+    vintage_kind: lagged
+    pub_lag_days: 35
+    sectors: [dc, grid]
+    link: Value of data center construction put in place; electrical and mechanical systems are a large share.
+
+  # ---------------------------------------------------------------- EIA electricity
+  - id: load_dom
+    name: Electricity demand, Dominion zone (Northern Virginia data center cluster)
+    source: eia930
+    params: {ba: DOM}
+    freq: M
+    agg: mean
+    unit: average MW
+    vintage_kind: lagged
+    pub_lag_days: 10
+    sectors: [dc, grid, power]
+    link: Load growth where the largest data center market draws power.
+  - id: load_erco
+    name: Electricity demand, ERCOT (Texas)
+    source: eia930
+    params: {ba: ERCO}
+    freq: M
+    agg: mean
+    unit: average MW
+    vintage_kind: lagged
+    pub_lag_days: 10
+    sectors: [dc, grid, power]
+    link: Texas load growth from data centers, industry and crypto mining.
+  - id: load_us48
+    name: Electricity demand, lower 48 states
+    source: eia930
+    params: {ba: US48}
+    freq: M
+    agg: mean
+    unit: average MW
+    vintage_kind: lagged
+    pub_lag_days: 10
+    sectors: [grid, power]
+    link: National load; demand for generation and grid capacity.
+  - id: sales_va_commercial
+    name: Retail electricity sales, Virginia commercial sector
+    source: eia861m
+    params: {state: VA, sector: commercial}
+    freq: M
+    agg: sum
+    unit: MWh
+    vintage_kind: lagged
+    pub_lag_days: 60
+    sectors: [dc]
+    link: Data centers are billed as commercial load in Virginia; the cleanest public meter on data center power.
+  - id: sales_tx_commercial
+    name: Retail electricity sales, Texas commercial sector
+    source: eia861m
+    params: {state: TX, sector: commercial}
+    freq: M
+    agg: sum
+    unit: MWh
+    vintage_kind: lagged
+    pub_lag_days: 60
+    sectors: [dc]
+    link: Commercial load in Texas, a fast-growing data center market.
+  - id: gen_pipeline_gas
+    name: Planned natural gas turbine capacity due within 24 months (EIA-860M)
+    source: eia860m
+    params: {group: gas_turbine, horizon_months: 24}
+    freq: M
+    agg: last
+    unit: MW
+    vintage_kind: vintage
+    sectors: [power, grid]
+    link: Combustion and combined-cycle turbines that developers report as planned; GE Vernova and Siemens
+      Energy gas turbines, plus transformers and switchyards per plant.
+  - id: gen_pipeline_storage
+    name: Planned battery storage capacity due within 24 months (EIA-860M)
+    source: eia860m
+    params: {group: battery, horizon_months: 24}
+    freq: M
+    agg: last
+    unit: MW
+    vintage_kind: vintage
+    sectors: [grid, power]
+    link: Each battery project needs inverters, transformers and switchgear.
+  - id: gen_pipeline_solar
+    name: Planned solar capacity due within 24 months (EIA-860M)
+    source: eia860m
+    params: {group: solar, horizon_months: 24}
+    freq: M
+    agg: last
+    unit: MW
+    vintage_kind: vintage
+    sectors: [grid, construction]
+    link: Utility-scale solar construction (Quanta, MasTec) and its collection-system electrical gear.
+  - id: gen_pipeline_wind
+    name: Planned wind capacity due within 24 months (EIA-860M)
+    source: eia860m
+    params: {group: wind, horizon_months: 24}
+    freq: M
+    agg: last
+    unit: MW
+    vintage_kind: vintage
+    sectors: [power, construction]
+    link: Onshore wind additions (GE Vernova wind segment, construction contractors).
+  - id: gen_pipeline_engines
+    name: Planned internal-combustion engine and fuel cell capacity due within 24 months (EIA-860M)
+    source: eia860m
+    params: {group: engine_fuelcell, horizon_months: 24}
+    freq: M
+    agg: last
+    unit: MW
+    vintage_kind: vintage
+    sectors: [power, machinery, dc]
+    link: Reciprocating engines and fuel cells (Caterpillar, Cummins, Bloom Energy) at grid-connected plants.
+  - id: gen_added_gas
+    name: Natural gas turbine capacity entering operation (EIA-860M)
+    source: eia860m
+    params: {group: gas_turbine, measure: added}
+    freq: M
+    agg: sum
+    transform: ttm          # lumpy: whole plants enter service in single months, so trailing twelve months
+    unit: MW
+    vintage_kind: vintage
+    sectors: [power]
+    link: Turbines delivered and commissioned; equipment revenue is recognised before or around this date.
+
+  # ---------------------------------------------------------------- trade (UN Comtrade, latest vintage)
+  - id: imp_transformers_large
+    name: US imports of liquid dielectric transformers above 10 MVA (HS 850423)
+    source: comtrade
+    params: {reporter: 842, flow: M, cmd: "850423"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [grid, power]
+    link: Most large power transformers used in the US are imported; imports track utility and data center
+      substation demand.
+  - id: imp_switchgear
+    name: US imports of switchboards and control panels (HS 8537)
+    source: comtrade
+    params: {reporter: 842, flow: M, cmd: "8537"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [grid, dc]
+    link: Imported switchgear competes with and supplements Eaton, Schneider and ABB US output.
+  - id: imp_gensets
+    name: US imports of electric generating sets (HS 8502)
+    source: comtrade
+    params: {reporter: 842, flow: M, cmd: "8502"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [power, dc]
+    link: Backup and prime power generator sets; data center backup power demand.
+  - id: imp_computers
+    name: US imports of computers and servers (HS 8471)
+    source: comtrade
+    params: {reporter: 842, flow: M, cmd: "8471"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [dc]
+    link: Servers arriving for installation; IT load that must be powered and cooled.
+  - id: exp_construction_mach
+    name: US exports of earthmoving machinery (HS 8429)
+    source: comtrade
+    params: {reporter: 842, flow: X, cmd: "8429"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [machinery]
+    link: Bulldozers, graders, loaders and excavators shipped abroad; Caterpillar is the largest US exporter.
+  - id: exp_semi_equip_us
+    name: US exports of semiconductor manufacturing machines (HS 8486)
+    source: comtrade
+    params: {reporter: 842, flow: X, cmd: "8486"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [semicap]
+    link: Tools shipped from US plants of Applied Materials, Lam Research and KLA.
+  - id: exp_semi_equip_jp
+    name: Japan exports of semiconductor manufacturing machines (HS 8486)
+    source: comtrade
+    params: {reporter: 392, flow: X, cmd: "8486"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [semicap]
+    link: Tokyo Electron and peers' shipments; a read on global wafer-fab equipment spending.
+  - id: imp_semi_equip_kr
+    name: Korea imports of semiconductor manufacturing machines (HS 8486)
+    source: comtrade
+    params: {reporter: 410, flow: M, cmd: "8486"}
+    freq: M
+    agg: sum
+    unit: USD
+    vintage_kind: lagged
+    pub_lag_days: 75
+    sectors: [semicap]
+    link: Samsung and SK hynix tool purchases arriving in Korea.
+
+  # ---------------------------------------------------------------- hiring (Indeed Hiring Lab, CC BY 4.0)
+  - id: jobs_electrical_eng
+    name: Indeed job postings index, electrical engineering (US)
+    source: indeed
+    params: {sector: Electrical Engineering}
+    freq: M
+    agg: mean
+    unit: index (Feb 2020 = 100)
+    vintage_kind: lagged
+    pub_lag_days: 7
+    sectors: [grid, dc, semicap]
+    link: Employers add engineers ahead of capacity and project work.
+  - id: jobs_construction
+    name: Indeed job postings index, construction (US)
+    source: indeed
+    params: {sector: Construction}
+    freq: M
+    agg: mean
+    unit: index (Feb 2020 = 100)
+    vintage_kind: lagged
+    pub_lag_days: 7
+    sectors: [construction, machinery]
+    link: Hiring intentions of contractors ahead of project starts.
+  - id: jobs_installation
+    name: Indeed job postings index, installation and maintenance (US)
+    source: indeed
+    params: {sector: Installation & Maintenance}
+    freq: M
+    agg: mean
+    unit: index (Feb 2020 = 100)
+    vintage_kind: lagged
+    pub_lag_days: 7
+    sectors: [grid, dc, construction]
+    link: Electricians and technicians install and service electrical and cooling equipment.
+  - id: jobs_manufacturing
+    name: Indeed job postings index, production and manufacturing (US)
+    source: indeed
+    params: {sector: Production & Manufacturing}
+    freq: M
+    agg: mean
+    unit: index (Feb 2020 = 100)
+    vintage_kind: lagged
+    pub_lag_days: 7
+    sectors: [machinery, grid, automation]
+    link: Factory hiring as manufacturers raise output.
+
+  # ---------------------------------------------------------------- interconnection queues (event dates)
+  - id: queue_new_gas_mw
+    name: New natural gas generation interconnection requests (MISO, SPP, CAISO, NYISO)
+    source: queues
+    params: {fuel: gas}
+    freq: M
+    agg: sum
+    unit: MW requested
+    vintage_kind: event
+    sectors: [power, grid]
+    link: Developers file for grid access years before ordering turbines; a long-lead signal for gas power.
+  - id: queue_new_storage_mw
+    name: New battery storage interconnection requests (MISO, SPP, CAISO, NYISO)
+    source: queues
+    params: {fuel: storage}
+    freq: M
+    agg: sum
+    unit: MW requested
+    vintage_kind: event
+    sectors: [grid]
+    link: Storage requests become inverter, transformer and switchgear orders if built.
+  - id: queue_new_total_mw
+    name: All new generation interconnection requests (MISO, SPP, CAISO, NYISO)
+    source: queues
+    params: {fuel: all}
+    freq: M
+    agg: sum
+    unit: MW requested
+    vintage_kind: event
+    sectors: [grid, construction, power]
+    link: Total developer demand for grid connections; most requests are later withdrawn.
+
+  # ---------------------------------------------------------------- permits, tenders, procurement (event dates)
+  - id: tx_dc_registrations
+    name: Texas data center construction registrations, estimated cost (TDLR TABS)
+    source: tdlr
+    params: {measure: cost}
+    freq: M
+    agg: sum
+    unit: USD estimated construction cost
+    vintage_kind: event
+    sectors: [dc, construction, grid]
+    link: Texas law requires registering commercial building projects above $50,000 with an accessibility review
+      before construction; data center registrations are a public, dated pipeline of new builds.
+  - id: eu_grid_tender_awards
+    name: EU contract awards for transformers, switchgear and power cables (TED)
+    source: ted
+    params: {measure: count}
+    freq: M
+    agg: sum
+    unit: award notices
+    vintage_kind: event
+    sectors: [grid]
+    link: European utilities' published equipment awards; demand for ABB, Siemens Energy, Schneider, Hitachi.

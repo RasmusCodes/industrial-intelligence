@@ -1,0 +1,138 @@
+# Data source registry. Ranked by how much each source contributed after checking availability, reliability
+# and economic relevance (see docs/DATA_SOURCES.md). status: used | partial | not used.
+# vintage: how the point-in-time date is obtained (see indintel/store.py).
+
+sources:
+  - id: sec
+    name: SEC EDGAR (XBRL company facts, filing index, filings)
+    url: https://www.sec.gov/edgar/sources
+    terms: Public data; SEC fair-access policy (declared User-Agent, at most 10 requests per second)
+    vintage: filing - every value carries the acceptance time of the filing that first reported it; restatements are new vintages
+    content: Quarterly revenue, costs, operating income and remaining performance obligations for 17 companies; segment revenue from 879 XBRL instance documents; capital expenditure of 4 hyperscalers and 22 utilities; 8-K release times and press releases; annual-report text for the mapping
+    status: used
+  - id: alfred
+    name: ALFRED / FRED, Federal Reserve Bank of St. Louis (Census M3 survey, construction spending, PPI, industrial production, copper, freight)
+    url: https://alfred.stlouisfed.org/
+    terms: FRED terms of use; underlying series are US government data (public domain) except the IMF copper price
+    vintage: vintage - every published vintage since mid-2011; a value is available from the end of its release day
+    content: 28 monthly series
+    status: used
+  - id: eia860m
+    name: EIA-860M Preliminary Monthly Electric Generator Inventory
+    url: https://www.eia.gov/electricity/data/eia860m/
+    terms: Public domain (US Energy Information Administration)
+    vintage: vintage - one archived file per month since July 2015; available 30 days after the reference month
+    content: Planned and newly operating generating capacity by technology (gas turbines, batteries, solar, wind, engines and fuel cells)
+    status: used
+  - id: eia930
+    name: EIA-930 Hourly Electric Grid Monitor
+    url: https://www.eia.gov/electricity/gridmonitor/
+    terms: Public domain (US Energy Information Administration)
+    vintage: lagged - current files only; monthly average demand assumed public 10 days after month end
+    content: Hourly demand by balancing authority and PJM sub-region (Dominion zone), July 2015 onward
+    status: used
+  - id: eia861m
+    name: EIA-861M monthly retail electricity sales
+    url: https://www.eia.gov/electricity/data/eia861m/
+    terms: Public domain (US Energy Information Administration)
+    vintage: lagged - current file only; assumed public 60 days after month end
+    content: Commercial-sector electricity sales in Virginia and Texas (data center load)
+    status: used
+  - id: census_c30
+    name: US Census Bureau, Value of Construction Put in Place (data center category)
+    url: https://www.census.gov/construction/c30/c30index.html
+    terms: Public domain (US Census Bureau)
+    vintage: lagged - current revised history only; assumed public 35 days after month end; revisions are not point-in-time
+    content: Private construction spending on data centers, monthly since 2014
+    status: used
+  - id: queues
+    name: Generator interconnection queues (MISO, CAISO, NYISO)
+    url: https://www.misoenergy.org/planning/resource-utilization/GI_Queue/
+    terms: Public files published by each grid operator
+    vintage: event - each request keeps its queue-entry date; withdrawn requests stay in the files, so new requests per month are rebuilt without survivorship
+    content: 8,500 requests with fuel, MW and status
+    status: used
+  - id: tdlr
+    name: Texas Department of Licensing and Regulation, TABS project registrations
+    url: https://www.tdlr.texas.gov/TABS/Search
+    terms: Public search; robots.txt allows it
+    vintage: event - registration timestamp
+    content: 277 data center construction registrations since December 2018 with estimated cost
+    status: used
+  - id: ted
+    name: Tenders Electronic Daily (EU public procurement journal), search API v3
+    url: https://ted.europa.eu/
+    terms: EU open data (Commission Decision 2011/833/EU, reuse allowed with attribution)
+    vintage: event - publication date
+    content: About 9,600 contract award notices for transformers, switchgear and power cable since 2018
+    status: used
+  - id: indeed
+    name: Indeed Hiring Lab job postings index
+    url: https://github.com/hiring-lab/job_postings_tracker
+    terms: CC BY 4.0, attribution Indeed Hiring Lab
+    vintage: lagged - current file only (Indeed revises the index); assumed public 7 days after month end
+    content: US job postings by occupational sector, daily since February 2020
+    status: used
+  - id: comtrade
+    name: UN Comtrade (public preview API)
+    url: https://comtradeplus.un.org/
+    terms: UN Comtrade terms; the anonymous preview API has a request quota
+    vintage: lagged - current database; assumed public 75 days after month end
+    content: US monthly imports and exports for six HS codes, January 2015 to November 2023. The anonymous quota (HTTP 403) stopped later US months and all Japan and Korea series; nothing was done to get around it
+    status: partial
+  - id: usaspending
+    name: USAspending.gov federal awards
+    url: https://www.usaspending.gov/
+    terms: Public domain (US Treasury)
+    vintage: event - award start date (timeline only)
+    content: Largest federal contract awards per company, shown on the timeline; federal buying is too small a share of these companies' sales to model
+    status: used
+  - id: crsp
+    name: CRSP daily stock returns (via WRDS, licensed)
+    url: https://www.crsp.org/
+    terms: Licensed; used locally for the excess-return tests only. No CRSP data is in this repository or on the dashboard
+    vintage: not applicable (market data)
+    content: Daily total returns of 12 target companies and the S&P 500, through December 2024
+    status: used
+  - id: bls_api
+    name: BLS public API
+    url: https://api.bls.gov/
+    terms: robots.txt disallows all agents
+    vintage: n/a
+    content: Not used; the same PPI series come from ALFRED, with vintages
+    status: not used
+  - id: ercot
+    name: ERCOT MIS reports (Texas interconnection and large-load reports)
+    url: https://www.ercot.com/
+    terms: robots.txt disallows the report pages
+    vintage: n/a
+    content: Not used
+    status: not used
+  - id: lbnl
+    name: Berkeley Lab 'Queued Up' interconnection dataset
+    url: https://emp.lbl.gov/queues
+    terms: Behind a bot challenge (HTTP 403 to scripts)
+    vintage: n/a
+    content: Not used; the operators' own queue files are used instead
+    status: not used
+  - id: pjm_spp
+    name: PJM and SPP interconnection queues
+    url: https://www.pjm.com/planning
+    terms: PJM's export needs a registered API key; SPP's public export lists active requests only (survivorship)
+    vintage: n/a
+    content: Not used
+    status: not used
+  - id: satellite
+    name: Satellite-derived datasets (NASA Black Marble night lights, Sentinel-5P NO2)
+    url: https://blackmarble.gsfc.nasa.gov/
+    terms: Free, but downloads need an Earthdata or Copernicus account
+    vintage: n/a
+    content: Not built; would need an account the project does not have
+    status: not used
+  - id: transcripts
+    name: Earnings-call transcripts
+    url: https://www.sec.gov/
+    terms: Commercial transcript providers do not allow redistribution
+    vintage: n/a
+    content: Not used; company statements come from 8-K press releases and annual reports filed with the SEC instead
+    status: not used

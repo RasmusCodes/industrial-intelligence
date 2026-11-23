@@ -1,0 +1,330 @@
+# Company mapping database: which operational indicators drive which company, segment and line item.
+#
+# The links below were written before any model was estimated, from each company's own description of its
+# business (see config/profiles/<TICKER>.yaml for the cited filing text) and the economic channel stated in
+# config/indicators.yaml. Models use these links as given; nothing here was chosen by searching for fit.
+#
+# driver fields
+#   indicator   id from config/indicators.yaml
+#   role        demand  - volume of orders or sales
+#               pricing - output price the company can charge
+#               cost    - input cost that squeezes margins
+#   segment     reportable segment the channel works through (display name), or "total"
+#   lead        expected timing of the indicator relative to the company's reported revenue
+#   why         the channel in one sentence
+#
+# segment_names maps XBRL segment members to display names (members renamed over time map to one name).
+
+companies:
+
+  - ticker: CAT
+    sectors: [machinery, power]
+    segment_names:
+      ConstructionIndustriesMember: Construction Industries
+      ResourceIndustriesMember: Resource Industries
+      EnergyandTransportationMember: Power & Energy        # renamed from Energy & Transportation in 2025
+      EnergyAndTransportationMember: Power & Energy
+      PowerEnergyMember: Power & Energy
+      FinancialProductsSegmentMember: Financial Products
+      FinancialProductsMember: Financial Products
+    drivers:
+      - {indicator: m3_construction_mach_orders, role: demand, segment: Construction Industries, lead: coincident to 1 quarter, why: US industry orders for the machines Construction Industries sells through dealers.}
+      - {indicator: cons_total, role: demand, segment: Construction Industries, lead: 0-2 quarters, why: Construction activity drives fleet utilisation and replacement.}
+      - {indicator: cons_highway, role: demand, segment: Construction Industries, lead: 0-2 quarters, why: Road building is earthmoving-intensive.}
+      - {indicator: housing_starts, role: demand, segment: Construction Industries, lead: 1-3 quarters, why: Residential starts buy compact and general construction equipment.}
+      - {indicator: exp_construction_mach, role: demand, segment: Construction Industries, lead: coincident, why: Caterpillar is the largest US exporter of earthmoving machinery.}
+      - {indicator: m3_mining_mach_orders, role: demand, segment: Resource Industries, lead: 0-2 quarters, why: US orders for mining and oilfield machinery.}
+      - {indicator: ip_mining, role: demand, segment: Resource Industries, lead: 1-4 quarters, why: Mining output drives machine hours, parts and replacement.}
+      - {indicator: copper_price, role: demand, segment: Resource Industries, lead: 2-4 quarters, why: Metal prices fund miners' equipment budgets.}
+      - {indicator: ip_drilling, role: demand, segment: Power & Energy, lead: 0-2 quarters, why: Well-site engines, gas compression and turbines.}
+      - {indicator: gen_pipeline_engines, role: demand, segment: Power & Energy, lead: 1-4 quarters, why: Reciprocating-engine power plants (Caterpillar gensets) planned on the grid.}
+      - {indicator: gen_pipeline_gas, role: demand, segment: Power & Energy, lead: 1-4 quarters, why: Solar Turbines (Caterpillar) supplies industrial gas turbines.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Power & Energy, lead: 0-3 quarters, why: Data center backup and prime power (gensets, turbines).}
+      - {indicator: ppi_construction_mach, role: pricing, segment: total, lead: coincident, why: Industry price index for construction machinery; Caterpillar reports price realization as a profit driver.}
+      - {indicator: ppi_iron_steel, role: cost, segment: total, lead: 1-3 quarters, why: Steel is the main material cost.}
+
+  - ticker: VRT
+    sectors: [dc]
+    segment_names:
+      AmericasSegmentMember: Americas
+      AsiaPacificSegmentMember: Asia Pacific
+      EMEASegmentMember: EMEA
+    drivers:
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 0-3 quarters, why: Cloud operators fund the data centers that buy Vertiv power and thermal systems.}
+      - {indicator: cons_data_center, role: demand, segment: Americas, lead: coincident to 2 quarters, why: Data center construction put in place in the US.}
+      - {indicator: load_dom, role: demand, segment: Americas, lead: -2 to 0 quarters, why: Power drawn in the largest data center market (load follows installed equipment).}
+      - {indicator: sales_va_commercial, role: demand, segment: Americas, lead: -2 to 0 quarters, why: Virginia commercial electricity sales, mostly data center load growth.}
+      - {indicator: imp_computers, role: demand, segment: total, lead: coincident, why: Servers arriving need power and cooling.}
+      - {indicator: m3_hvac_orders, role: demand, segment: total, lead: coincident, why: Industry orders for thermal equipment.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: total, lead: coincident, why: Industry orders for electrical equipment (UPS, switchgear, busway).}
+      - {indicator: tx_dc_registrations, role: demand, segment: Americas, lead: 2-6 quarters, why: Texas data center projects registered before construction.}
+      - {indicator: jobs_electrical_eng, role: demand, segment: total, lead: 0-2 quarters, why: Engineering hiring in the electrical supply chain.}
+      - {indicator: ppi_switchgear, role: pricing, segment: total, lead: coincident, why: Pricing for electrical distribution equipment.}
+      - {indicator: copper_price, role: cost, segment: total, lead: 1-3 quarters, why: Copper in busbars, cables and coils.}
+
+  - ticker: ETN
+    sectors: [grid, dc]
+    segment_names:
+      ElectricalAmericasSegmentMember: Electrical Americas
+      ElectricalAmericasMember: Electrical Americas
+      ElectricalGlobalSegmentMember: Electrical Global
+      ElectricalGlobalMember: Electrical Global
+      AerospaceSegmentMember: Aerospace
+      AerospaceMember: Aerospace
+      VehicleSegmentMember: Vehicle
+      VehicleMember: Vehicle
+      EMobilitySegmentMember: eMobility
+      EMobilityMember: eMobility
+      HydraulicsSegmentMember: Hydraulics
+      HydraulicsMember: Hydraulics
+      ElectricalProductsMember: Electrical Products
+      ElectricalSystemsAndServicesMember: Electrical Systems and Services
+    drivers:
+      - {indicator: m3_elec_equip_orders, role: demand, segment: Electrical Americas, lead: coincident to 2 quarters, why: US industry orders for electrical equipment.}
+      - {indicator: m3_elec_equip_shipments, role: demand, segment: Electrical Americas, lead: coincident, why: US industry shipments of electrical equipment.}
+      - {indicator: cons_nonres, role: demand, segment: Electrical Americas, lead: 0-2 quarters, why: Nonresidential buildings need distribution equipment.}
+      - {indicator: cons_data_center, role: demand, segment: Electrical Americas, lead: 0-2 quarters, why: Data centers are Eaton's fastest-growing electrical end market.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Electrical Americas, lead: 0-3 quarters, why: Cloud capital spending funds data center electrical rooms.}
+      - {indicator: utility_capex, role: demand, segment: Electrical Americas, lead: 0-3 quarters, why: Utility distribution equipment and transformers.}
+      - {indicator: cons_manufacturing, role: demand, segment: Electrical Americas, lead: 0-2 quarters, why: New factories need power distribution.}
+      - {indicator: ppi_switchgear, role: pricing, segment: Electrical Americas, lead: coincident, why: Industry price of switchgear.}
+      - {indicator: ppi_transformers, role: pricing, segment: Electrical Americas, lead: coincident, why: Industry price of transformers.}
+      - {indicator: copper_price, role: cost, segment: total, lead: 1-3 quarters, why: Copper and other metals in electrical products.}
+
+  - ticker: GEV
+    sectors: [power, grid]
+    segment_names:
+      PowerSegmentMember: Power
+      WindSegmentMember: Wind
+      ElectrificationSegmentMember: Electrification
+    drivers:
+      - {indicator: gen_pipeline_gas, role: demand, segment: Power, lead: 2-8 quarters, why: Planned gas turbine capacity on the US grid.}
+      - {indicator: gen_added_gas, role: demand, segment: Power, lead: -2 to 0 quarters, why: Turbines entering service follow equipment deliveries.}
+      - {indicator: queue_new_gas_mw, role: demand, segment: Power, lead: 4-12 quarters, why: New gas interconnection requests precede turbine orders.}
+      - {indicator: utility_capex, role: demand, segment: Electrification, lead: 0-3 quarters, why: Utilities buy transformers, switchgear and grid systems.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: Electrification, lead: coincident to 2 quarters, why: US electrical equipment orders.}
+      - {indicator: gen_pipeline_wind, role: demand, segment: Wind, lead: 1-4 quarters, why: Planned onshore wind capacity.}
+      - {indicator: load_us48, role: demand, segment: total, lead: 2-8 quarters, why: Load growth raises the need for generation and grid capacity.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Power, lead: 2-8 quarters, why: Data center power demand drives new gas plants.}
+      - {indicator: ppi_turbines, role: pricing, segment: Power, lead: coincident, why: Industry price of turbines and generator sets.}
+      - {indicator: ppi_transformers, role: pricing, segment: Electrification, lead: coincident, why: Industry price of transformers.}
+
+  - ticker: PWR
+    sectors: [construction, grid]
+    segment_names: {}
+    drivers:
+      - {indicator: utility_capex, role: demand, segment: total, lead: coincident, why: Utility transmission and distribution budgets pay for Quanta's crews.}
+      - {indicator: cons_power, role: demand, segment: total, lead: coincident, why: Power construction put in place.}
+      - {indicator: gen_pipeline_solar, role: demand, segment: total, lead: 0-3 quarters, why: Utility-scale solar construction.}
+      - {indicator: gen_pipeline_storage, role: demand, segment: total, lead: 0-3 quarters, why: Battery storage construction.}
+      - {indicator: queue_new_total_mw, role: demand, segment: total, lead: 4-12 quarters, why: Interconnection requests precede generation and grid construction.}
+      - {indicator: load_us48, role: demand, segment: total, lead: 2-8 quarters, why: Load growth requires grid build-out.}
+      - {indicator: cons_data_center, role: demand, segment: total, lead: 0-2 quarters, why: Data center campuses need substations and lines.}
+      - {indicator: jobs_installation, role: demand, segment: total, lead: 0-2 quarters, why: Hiring of installation and maintenance labour.}
+
+  - ticker: BE
+    sectors: [power, dc]
+    segment_names: {}
+    drivers:
+      - {indicator: gen_pipeline_engines, role: demand, segment: total, lead: 0-4 quarters, why: Fuel cell and engine capacity planned at grid-connected plants.}
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 0-4 quarters, why: Data centers buy on-site fuel cell power.}
+      - {indicator: cons_data_center, role: demand, segment: total, lead: 0-2 quarters, why: Data center construction.}
+      - {indicator: load_dom, role: demand, segment: total, lead: 0-4 quarters, why: Constrained grid power where data centers cluster.}
+      - {indicator: sales_va_commercial, role: demand, segment: total, lead: 0-4 quarters, why: Data center load growth in Virginia.}
+
+  - ticker: HUBB
+    sectors: [grid]
+    segment_names:
+      ElectricalSegmentMember: Electrical Solutions
+      ElectricalMember: Electrical Solutions
+      UtilitySolutionsSegmentMember: Utility Solutions
+      PowerSegmentMember: Utility Solutions
+      PowerMember: Utility Solutions
+    drivers:
+      - {indicator: utility_capex, role: demand, segment: Utility Solutions, lead: coincident to 2 quarters, why: Utilities buy grid components and connectors.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: total, lead: coincident to 2 quarters, why: US electrical equipment orders.}
+      - {indicator: cons_nonres, role: demand, segment: Electrical Solutions, lead: 0-2 quarters, why: Nonresidential buildings need wiring devices and connectors.}
+      - {indicator: cons_data_center, role: demand, segment: Electrical Solutions, lead: 0-2 quarters, why: Data center electrical content.}
+      - {indicator: jobs_electrical_eng, role: demand, segment: total, lead: 0-2 quarters, why: Electrical engineering hiring.}
+      - {indicator: ppi_transformers, role: pricing, segment: Utility Solutions, lead: coincident, why: Grid equipment pricing.}
+      - {indicator: copper_price, role: cost, segment: total, lead: 1-3 quarters, why: Copper and steel content.}
+
+  - ticker: POWL
+    sectors: [grid, dc]
+    segment_names: {}
+    drivers:
+      - {indicator: m3_elec_equip_orders, role: demand, segment: total, lead: 2-6 quarters, why: Custom switchgear has long lead times; orders today become revenue later.}
+      - {indicator: utility_capex, role: demand, segment: total, lead: 1-4 quarters, why: Utility substations and distribution.}
+      - {indicator: ip_drilling, role: demand, segment: total, lead: 2-6 quarters, why: Oil, gas and petrochemical projects are a historic core market.}
+      - {indicator: cons_data_center, role: demand, segment: total, lead: 1-4 quarters, why: Data center electrical rooms.}
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 1-4 quarters, why: Cloud capital spending.}
+      - {indicator: imp_switchgear, role: demand, segment: total, lead: coincident, why: US demand for switchboards met by imports and domestic makers.}
+      - {indicator: ppi_switchgear, role: pricing, segment: total, lead: coincident, why: Switchgear pricing.}
+      - {indicator: copper_price, role: cost, segment: total, lead: 1-3 quarters, why: Copper bus and cables.}
+
+  - ticker: MOD
+    sectors: [dc]
+    segment_names:
+      ClimateSolutionsMember: Climate Solutions
+      PerformanceTechnologiesMember: Performance Technologies
+      BuildingHvacMember: Building HVAC
+      CommercialAndIndustrialSolutionsMember: Commercial and Industrial Solutions
+      HeavyDutyEquipmentMember: Heavy Duty Equipment
+      AutomotiveSegmentMember: Automotive
+      VehicularThermalSolutionsMember: Vehicular Thermal Solutions
+    drivers:
+      - {indicator: m3_hvac_orders, role: demand, segment: Climate Solutions, lead: coincident, why: Industry orders for HVAC and refrigeration equipment.}
+      - {indicator: cons_data_center, role: demand, segment: Climate Solutions, lead: 0-2 quarters, why: Data center cooling.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Climate Solutions, lead: 0-3 quarters, why: Cloud capital spending.}
+      - {indicator: cons_nonres, role: demand, segment: Climate Solutions, lead: 0-2 quarters, why: Commercial building HVAC.}
+      - {indicator: freight_tsi, role: demand, segment: Performance Technologies, lead: 0-2 quarters, why: Truck and off-highway activity drives vehicle thermal products.}
+
+  - ticker: NVT
+    sectors: [grid, dc]
+    segment_names:
+      EnclosuresSegmentMember: Enclosures
+      ElectricalandFasteningSolutionsSegmentMember: Electrical and Fastening Solutions
+      ThermalManagementSegmentMember: Thermal Management
+    drivers:
+      - {indicator: cons_nonres, role: demand, segment: total, lead: 0-2 quarters, why: Commercial and industrial buildings.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: total, lead: coincident to 2 quarters, why: US electrical equipment orders.}
+      - {indicator: cons_data_center, role: demand, segment: Enclosures, lead: 0-2 quarters, why: Data center enclosures and liquid cooling.}
+      - {indicator: utility_capex, role: demand, segment: Electrical and Fastening Solutions, lead: 0-2 quarters, why: Utility and infrastructure electrical connections.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Enclosures, lead: 0-3 quarters, why: Cloud capital spending.}
+      - {indicator: ppi_switchgear, role: pricing, segment: total, lead: coincident, why: Electrical distribution pricing.}
+      - {indicator: copper_price, role: cost, segment: total, lead: 1-3 quarters, why: Copper and steel content.}
+
+  - ticker: CMI
+    sectors: [machinery, power]
+    segment_names:
+      EngineMember: Engine
+      ComponentsMember: Components
+      DistributionMember: Distribution
+      PowerSystemsMember: Power Systems
+      PowerGenerationMember: Power Systems
+      AcceleraMember: Accelera
+      NewPowerMember: Accelera
+    drivers:
+      - {indicator: freight_tsi, role: demand, segment: Engine, lead: 0-3 quarters, why: Freight volumes drive truck builds and engine demand.}
+      - {indicator: m3_core_capex_orders, role: demand, segment: total, lead: 0-2 quarters, why: Capital goods orders.}
+      - {indicator: gen_pipeline_engines, role: demand, segment: Power Systems, lead: 0-4 quarters, why: Engine-based power plants.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Power Systems, lead: 0-3 quarters, why: Data center backup generators.}
+      - {indicator: imp_gensets, role: demand, segment: Power Systems, lead: coincident, why: US generating-set demand.}
+      - {indicator: ip_drilling, role: demand, segment: Engine, lead: 0-2 quarters, why: Oilfield engines.}
+      - {indicator: ppi_iron_steel, role: cost, segment: total, lead: 1-3 quarters, why: Steel and castings.}
+
+  - ticker: URI
+    sectors: [machinery, construction]
+    segment_names:
+      GeneralRentalsMember: General Rentals
+      GeneralRentalsSegmentMember: General Rentals
+      SpecialtySegmentMember: Specialty
+      SpecialtyMember: Specialty
+    drivers:
+      - {indicator: cons_nonres, role: demand, segment: total, lead: 0-2 quarters, why: Nonresidential construction is the core rental market.}
+      - {indicator: cons_total, role: demand, segment: total, lead: 0-2 quarters, why: Construction activity.}
+      - {indicator: cons_manufacturing, role: demand, segment: total, lead: 0-2 quarters, why: Large industrial projects rent fleets.}
+      - {indicator: cons_data_center, role: demand, segment: total, lead: 0-2 quarters, why: Data center construction sites.}
+      - {indicator: jobs_construction, role: demand, segment: total, lead: 0-2 quarters, why: Contractor hiring.}
+
+  - ticker: MTZ
+    sectors: [construction, grid]
+    segment_names: {}
+    drivers:
+      - {indicator: utility_capex, role: demand, segment: total, lead: coincident, why: Utility transmission and distribution work.}
+      - {indicator: cons_power, role: demand, segment: total, lead: coincident, why: Power construction.}
+      - {indicator: gen_pipeline_solar, role: demand, segment: total, lead: 0-3 quarters, why: Utility-scale solar construction.}
+      - {indicator: gen_pipeline_wind, role: demand, segment: total, lead: 0-3 quarters, why: Wind construction.}
+      - {indicator: queue_new_total_mw, role: demand, segment: total, lead: 4-12 quarters, why: Generation pipeline.}
+      - {indicator: ip_drilling, role: demand, segment: total, lead: 1-4 quarters, why: Pipeline construction follows oil and gas activity.}
+
+  - ticker: ROK
+    sectors: [automation]
+    segment_names:
+      IntelligentDevicesSegmentMember: Intelligent Devices
+      SoftwareAndControlSegmentMember: Software & Control
+      LifecycleServicesSegmentMember: Lifecycle Services
+      LifecycleServicesMember: Lifecycle Services
+      ArchitectureAndSoftwareMember: Architecture & Software
+      ControlProductsAndSolutionsMember: Control Products & Solutions
+    drivers:
+      - {indicator: m3_core_capex_orders, role: demand, segment: total, lead: 0-2 quarters, why: Business investment orders.}
+      - {indicator: m3_industrial_mach_orders, role: demand, segment: total, lead: 0-2 quarters, why: Machine builders are a core channel.}
+      - {indicator: cons_manufacturing, role: demand, segment: total, lead: 0-3 quarters, why: New plants need automation.}
+      - {indicator: jobs_manufacturing, role: demand, segment: total, lead: 0-2 quarters, why: Factory hiring signals output plans.}
+
+  - ticker: AMAT
+    sectors: [semicap]
+    segment_names:
+      SemiconductorSystemsMember: Semiconductor Systems
+      SemiconductorSystemsSegmentMember: Semiconductor Systems
+      AppliedGlobalServicesMember: Applied Global Services
+      AppliedGlobalServicesSegmentMember: Applied Global Services
+      DisplayandAdjacentMarketsMember: Display
+      DisplayMember: Display
+      DisplaySegmentMember: Display
+      SiliconSystemsGroupMember: Semiconductor Systems
+    drivers:
+      - {indicator: exp_semi_equip_us, role: demand, segment: Semiconductor Systems, lead: coincident, why: Tools shipped from US plants.}
+      - {indicator: exp_semi_equip_jp, role: demand, segment: Semiconductor Systems, lead: coincident, why: Global wafer-fab equipment cycle.}
+      - {indicator: imp_semi_equip_kr, role: demand, segment: Semiconductor Systems, lead: coincident, why: Memory makers' tool imports.}
+      - {indicator: ip_semis, role: demand, segment: total, lead: 0-4 quarters, why: Chip output and utilisation.}
+      - {indicator: m3_industrial_mach_orders, role: demand, segment: total, lead: coincident, why: US machinery orders including semiconductor machinery.}
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 0-4 quarters, why: AI servers pull leading-edge logic and memory capacity.}
+
+  - ticker: LRCX
+    sectors: [semicap]
+    segment_names: {}
+    drivers:
+      - {indicator: exp_semi_equip_us, role: demand, segment: total, lead: coincident, why: Tools shipped from US plants.}
+      - {indicator: exp_semi_equip_jp, role: demand, segment: total, lead: coincident, why: Global wafer-fab equipment cycle.}
+      - {indicator: imp_semi_equip_kr, role: demand, segment: total, lead: coincident, why: Memory makers are Lam's largest customers.}
+      - {indicator: ip_semis, role: demand, segment: total, lead: 0-4 quarters, why: Chip output and utilisation.}
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 0-4 quarters, why: AI demand for memory and logic capacity.}
+
+  - ticker: KLAC
+    sectors: [semicap]
+    segment_names:
+      SemiconductorProcessControlMember: Semiconductor Process Control
+      SpecialtySemiconductorProcessMember: Specialty Semiconductor Process
+      PCBDisplayAndComponentInspectionMember: PCB and Component Inspection
+      PCBAndComponentInspectionMember: PCB and Component Inspection
+    drivers:
+      - {indicator: exp_semi_equip_us, role: demand, segment: Semiconductor Process Control, lead: coincident, why: Tools shipped from US plants.}
+      - {indicator: exp_semi_equip_jp, role: demand, segment: Semiconductor Process Control, lead: coincident, why: Global wafer-fab equipment cycle.}
+      - {indicator: imp_semi_equip_kr, role: demand, segment: total, lead: coincident, why: Korean tool imports.}
+      - {indicator: ip_semis, role: demand, segment: total, lead: 0-4 quarters, why: Chip output and utilisation.}
+      - {indicator: hyperscaler_capex, role: demand, segment: total, lead: 0-4 quarters, why: AI-driven leading-edge capacity.}
+
+  - ticker: ABBNY
+    sectors: [grid, automation, dc]
+    segment_names:
+      ElectrificationMember: Electrification
+      MotionMember: Motion
+      ProcessAutomationMember: Process Automation
+      RoboticsDiscreteAutomationMember: Robotics & Discrete Automation
+    drivers:
+      - {indicator: eu_grid_tender_awards, role: demand, segment: Electrification, lead: 0-4 quarters, why: European utility equipment awards.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: Electrification, lead: coincident to 2 quarters, why: US electrical equipment orders.}
+      - {indicator: cons_data_center, role: demand, segment: Electrification, lead: 0-2 quarters, why: Data center electrification.}
+      - {indicator: m3_core_capex_orders, role: demand, segment: Process Automation, lead: 0-2 quarters, why: Industrial investment.}
+
+  - ticker: ENR.DE
+    sectors: [power, grid]
+    segment_names: {}
+    drivers:
+      - {indicator: gen_pipeline_gas, role: demand, segment: Gas Services, lead: 2-8 quarters, why: US planned gas turbine capacity.}
+      - {indicator: queue_new_gas_mw, role: demand, segment: Gas Services, lead: 4-12 quarters, why: Gas interconnection requests.}
+      - {indicator: eu_grid_tender_awards, role: demand, segment: Grid Technologies, lead: 0-4 quarters, why: European grid equipment awards.}
+      - {indicator: imp_transformers_large, role: demand, segment: Grid Technologies, lead: coincident, why: US large-transformer imports (Siemens Energy exports transformers to the US).}
+      - {indicator: ppi_turbines, role: pricing, segment: Gas Services, lead: coincident, why: Turbine pricing.}
+
+  - ticker: SU.PA
+    sectors: [grid, dc, automation]
+    segment_names: {}
+    drivers:
+      - {indicator: cons_data_center, role: demand, segment: Energy Management, lead: 0-2 quarters, why: Data center electrical and cooling systems.}
+      - {indicator: hyperscaler_capex, role: demand, segment: Energy Management, lead: 0-3 quarters, why: Cloud capital spending.}
+      - {indicator: eu_grid_tender_awards, role: demand, segment: Energy Management, lead: 0-4 quarters, why: European grid equipment awards.}
+      - {indicator: m3_elec_equip_orders, role: demand, segment: Energy Management, lead: coincident to 2 quarters, why: US electrical equipment orders.}
+      - {indicator: m3_core_capex_orders, role: demand, segment: Industrial Automation, lead: 0-2 quarters, why: Industrial investment.}

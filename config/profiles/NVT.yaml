@@ -1,0 +1,45 @@
+ticker: NVT
+document: NVT_10-K_2026-02-17.txt
+description: nVent designs, manufactures and services electrical connection and protection products (enclosures, cooling, switchgear, bus systems, cable management, power connections) for mission critical equipment, buildings and industrial processes. Customers are primarily hyperscalers, utilities, original equipment manufacturers, panel builders and contractors.
+segments:
+  - name: Systems Protection
+    sells: Standard and custom protective enclosures, liquid and air cooling solutions, control buildings, switchgear systems and power distribution solutions.
+    end_markets: Mission critical applications including data centers, in infrastructure, industrial and commercial verticals; one customer was about 11% of 2025 consolidated net sales and sits in this segment.
+  - name: Electrical Connections
+    sells: Bus systems, cable management, electrical connections and solutions, and power connections.
+    end_markets: Commercial and residential, infrastructure and industrial verticals; connects power and data infrastructure.
+geography:
+  summary: Sales outside the U.S. were about 24% of 2025 net sales, so roughly three quarters of sales are in the U.S. The company sells globally but serves locally with regional manufacturing and supply chains.
+  evidence:
+    - quote: "Sales outside of the U.S. for the year ended December 31, 2025 accounted for approximately 24% of our net sales."
+    - quote: "We sell globally but serve locally with regional manufacturing and supply chains."
+    - quote: "We compete in various geographic regions and product markets around the world."
+customers:
+  summary: Solutions are primarily used by hyperscalers, utilities, OEMs, panel builders and contractors; sales go through channels the filing does not itemize in the pack. One customer in Systems Protection was about 11% of 2025 sales, up from no customer above 10% in 2024 and 2023.
+  concentration: Largest customer about 11% of 2025 consolidated net sales (Systems Protection segment); no other customer above 10% in 2025; about 11% of accounts receivable at 2025 year end.
+  evidence:
+    - quote: "Our net sales to our largest customer represented approximately 11% of our consolidated net sales in 2025."
+    - quote: "One customer within our Systems Protection segment represented approximately 11 % of consolidated net sales for the year ended December 31, 2025."
+    - quote: "Our solutions are primarily used by hyperscalers, utilities, original equipment manufacturers, panel builders and contractors."
+backlog:
+  measure: both
+  latest: Backlog $2.3 billion at December 31, 2025; remaining performance obligations $2,349.9 million at December 31, 2025.
+  horizon: The majority of backlog at December 31, 2025 is expected to ship in 2026 (not quantified).
+  summary: Most revenue comes from orders delivered within the same month or within 90 days, but a growing infrastructure backlog (data centers) takes more than a year. The backlog rose in 2025 mainly because of the Electrical Products Group acquisition and data center growth.
+  evidence:
+    - quote: "The dollar amount of backlog as of December 31, 2025 was $2.3 billion."
+    - quote: "On December 31, 2025, we had $ 2,349.9 million of remaining performance obligations."
+    - quote: "We expect the majority of our backlog at December 31, 2025 will be shipped in 2026."
+    - quote: "The increase in backlog from 2024 to 2025 was primarily the result of the acquisition of the Electrical Products Group and the growth of our data centers business."
+pricing:
+  summary: The company implements selling price increases and pricing actions to offset raw material, freight, labor and tariff cost inflation; infrastructure organic growth included selective price increases. New 2025 tariffs had no material impact in 2025 due to mitigating actions, and cost inflation including tariffs is expected to continue in 2026.
+  evidence:
+    - quote: "We strive for productivity improvements and implement increases in selling prices to help mitigate cost increases in raw materials, freight, energy, wage and other costs such as pension, health care and insurance."
+    - quote: "The effects from new tariffs imposed in 2025 did not have a material impact on our financial results in 2025 due to mitigating actions."
+    - quote: "organic sales growth contribution of approximately 16.0% from our infrastructure business in 2025 from 2024, which includes selective increases in selling prices and growth in the data centers business."
+margin_drivers:
+  summary: Segment results cite inflation (raw materials and labor, including tariffs) as a headwind, offset by productivity from supply chain management, manufacturing efficiencies and restructuring savings. Principal materials are steel, copper, aluminum, electronic components and paint.
+  evidence:
+    - quote: "inflationary increases, including the impacts related to tariffs, primarily related to raw materials and labor costs, compared to 2024; and"
+    - quote: "increased productivity as a result of supply chain management and manufacturing efficiencies."
+    - quote: "savings generated from restructuring and other productivity initiatives."

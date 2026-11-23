@@ -1,0 +1,46 @@
+ticker: AMAT
+document: AMAT_10-K_2025-12-12.txt
+description: Applied Materials provides semiconductor capital equipment (materials engineering, process control, advanced packaging), plus services, spares and software, to manufacturers of semiconductor wafers and chips. Fiscal 2025 ended October 26, 2025.
+segments:
+  - name: Semiconductor Systems
+    sells: Equipment for etch, rapid thermal processing, deposition, chemical mechanical planarization, metrology and inspection, wafer packaging and ion implantation; the largest contributor to net revenue.
+    end_markets: Foundry, logic, memory and other chipmakers; demand driven by smartphones, PCs, AI and data center servers, automobiles and other devices, and by technology transitions.
+  - name: Applied Global Services (AGS)
+    sells: Services, spares, upgrades, factory automation software, and 200mm and other equipment (200mm moves to Semiconductor Systems in fiscal 2026).
+    end_markets: Fab customers using the installed base; demand driven by installed base growth, wafer starts, utilization rates and service intensity; shifting toward subscription agreements.
+geography:
+  summary: About 89% of fiscal 2025 net revenue was to customers outside the United States, with China, Taiwan and Korea named as the key regions. U.S. export controls on China limit some product and service sales.
+  evidence:
+    - quote: "In fiscal 2025, approximately 89% of our net revenue was to customers in regions outside the United States."
+    - quote: "A majority of our products and services are delivered to customers in jurisdictions outside of the United States, including China, Taiwan and Korea."
+    - quote: "Our customer base is geographically concentrated, particularly in China, Taiwan and Korea"
+customers:
+  summary: Manufacturers within the semiconductor industry, sold primarily through a direct sales force. A limited number of customers account for a substantial share of business.
+  concentration: Two customers about 19% and 15% of fiscal 2025 net revenue (about 12% and 11% in fiscal 2024).
+  evidence:
+    - quote: "During fiscal 2025, two customers accounted for approximately 19% and 15%, respectively, of our net revenue."
+    - quote: "A relatively limited number of customers account for a substantial portion of our business."
+    - quote: "We sell our products principally to manufacturers within the semiconductor industry."
+    - quote: "Our portfolio of equipment and service products are highly technical and are sold primarily through a direct sales force."
+backlog:
+  measure: both
+  latest: Backlog $15,002 million at October 26, 2025 (Semiconductor Systems $7,105 million, AGS $7,141 million, Corporate and Other $756 million); remaining performance obligations on contracts of one year or more about $1.7 billion.
+  horizon: About 31% of backlog is not reasonably expected to be filled within 12 months (so about 69% within 12 months); about 53% of the $1.7 billion remaining performance obligations expected within 12 months.
+  summary: Backlog includes accepted orders not yet recognized plus contractual service revenue and maintenance fees, and is subject to cancellation, delay and export rule changes.
+  evidence:
+    - quote: "Backlog consisted of: (1) orders for which written authorizations have been accepted, or shipment has occurred but revenue has not been recognized; and (2) contractual service revenue and maintenance fees."
+    - quote: "Of the total backlog as of October 26, 2025, approximately 31% is not reasonably expected to be filled within the next 12 months."
+    - quote: "the amount of remaining unsatisfied performance obligations on contracts, primarily consisting of written purchase orders received from customers, with an original estimated duration of one year or more was approximately $ 1.7 billion"
+    - quote: "of which approximately 53 % is expected to be recognized within 12 months and the remainder is expected to be recognized within the following 24 months thereafter."
+pricing:
+  summary: Higher average selling prices contributed to fiscal 2025 gross and Semiconductor Systems operating margin gains. Tariffs raise input costs and can hurt margins and customer demand, and the filing does not describe formal price escalators.
+  evidence:
+    - quote: "Gross margin increased primarily driven by higher net revenue, favorable changes in customer and product mix, an increase in average selling prices, and lower material and manufacturing costs."
+    - quote: "primarily driven by higher net revenue, favorable changes in customer and product mix, lower material and manufacturing costs, and an increase in average selling prices, partially offset by increased RD&E expenses."
+    - quote: "Increases in tariffs increase our costs and can negatively impact our margins and reduce the competitiveness of our products due to the increase in the cost of importing materials, parts and components used in manufacturing our products."
+margin_drivers:
+  summary: Fiscal 2025 gross margin gains came from higher revenue, customer and product mix, selling prices and lower material and manufacturing costs. AGS operating margin fell on lower 200mm equipment revenue, headcount growth and excess and obsolete inventory charges.
+  evidence:
+    - quote: "Gross margin increased primarily driven by higher net revenue, favorable changes in customer and product mix, an increase in average selling prices, and lower material and manufacturing costs."
+    - quote: "primarily due to a decrease in 200mm equipment net revenue, higher expense related to an increase in headcount to support business growth, and higher excess and obsolete inventory charges"
+    - quote: "Trade restrictions and export regulations, or increased or new tariffs and additional taxes, including any retaliatory measures, can negatively impact end-user demand and customer investment in semiconductor equipment"

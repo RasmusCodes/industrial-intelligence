@@ -1,0 +1,42 @@
+ticker: HUBB
+document: HUBB_10-K_2026-02-12.txt
+description: Hubbell makes electrical and utility products, including grid transmission and distribution components, smart meters and communications and controls, wiring devices and electrical products sold to utilities, contractors and industrial customers mostly through distributors.
+segments:
+  - name: Utility Solutions
+    sells: Components that let the grid transmit and distribute energy, plus communications and controls (smart meters, protection and control devices)
+    end_markets: Electric utilities (63% of consolidated revenue in 2025), sold primarily through distributors or directly to utilities
+  - name: Electrical Solutions
+    sells: Wiring devices, connector and grounding products, other electrical equipment and industrial controls and communication systems
+    end_markets: Non-residential, light and heavy industrial, data center, electric transmission and distribution and renewables markets
+geography:
+  summary: International operations were about 7% of 2025 net sales, so the business is predominantly US based. A regional split is not given in the text searched.
+  evidence:
+    - quote: "Our international operations accounted for approximatel y 7% of our Net sales in 2025."
+    - quote: "We manufacture and source products and materials from various countries throughout the world."
+customers:
+  summary: Extensive base of distributors, wholesalers, utilities, OEMs, contractors, telecom companies and retail outlets. Sales are mainly through electrical and industrial distributors and directly to utilities.
+  concentration: not disclosed
+  evidence:
+    - quote: "We have an extensive customer base of distributors, wholesalers, electric utilities, OEMs, electrical contractors, telecommunications companies and retail and hardware outlets."
+    - quote: "The products are sold into these markets primarily through distributors, or directly to utilities."
+    - quote: "Products of the Electrical Solutions segment are sold under various brands and/or trademarks and are primarily sold through electrical and industrial distributors, home centers, retail and hardware outlets, and residential product oriented internet sites."
+backlog:
+  measure: backlog
+  latest: "$2,159 million at December 31, 2025 (vs $1,898 million at December 31, 2024)"
+  horizon: "Substantially all Electrical Solutions backlog expected to ship in 2026; Utility Solutions timing not stated"
+  summary: Backlog of orders believed firm rose about 14%; most revenue comes from inventoried or short-lead-time products so backlog is not the main driver.
+  evidence:
+    - quote: "The backlog of orders believed to be firm at December 31, 2025 was $2,159 million compared to $1,898 million at December 31, 2024."
+    - quote: "Substantially all of the backlog existing at December 31, 2025 in the Electrical Solutions segment is expected to be shipped to customers in 2026."
+pricing:
+  summary: Pricing actions are a stated strategy to offset raw material, component, logistics and tariff cost inflation. In 2025 organic sales growth was on favorable price realization and higher unit volumes.
+  evidence:
+    - quote: "Our strategy is to also increase selling prices to offset rising costs of raw materials, components and logistics and supply chain matters when necessary."
+    - quote: "We have had to take various pricing actions to cover the increase in our costs associated with inflationary pressure and protect our margin profile."
+    - quote: "In 2025, Net sales increased by 3.8% or $216 million and organic Net sales (1) increased by $186 million on favorable price realization and higher unit volumes, as further discussed in segment results below."
+margin_drivers:
+  summary: Operating margin rose 130 bp in 2025 (adjusted 80 bp) on favorable price realization and operational productivity; Electrical Solutions margin was 19.3%, up 150 bp. Pricing and productivity programs are meant to offset inflation and tariffs.
+  evidence:
+    - quote: "Operating margin increased in 2025, by 130 basis points and adjusted operating margin (1) increased by 80 basis points, driven by favorable price realization and improved operational productivity."
+    - quote: "Our pricing and productivity programs are intended to mitigate the risk to our operating margins related to these inflationary pressures and cost increases as a result of tariffs."
+    - quote: "Operating income of the Electrical Solutions segment in 2025 was $418.9 million and increased approximately 15.9% compared to 2024, while operating margin in 2025 increased by 150 basis points to 19.3%."

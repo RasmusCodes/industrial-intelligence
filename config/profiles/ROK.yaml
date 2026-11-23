@@ -1,0 +1,47 @@
+ticker: ROK
+document: ROK_10-K_2026-11-12.txt
+description: Rockwell Automation sells industrial automation hardware, software, solutions and services (drives, motion, controls, safety, software, digital and lifecycle services) to manufacturers worldwide. Fiscal 2026 ended September 30, 2026.
+segments:
+  - name: Intelligent Devices
+    sells: Drives, motion, advanced material handling, safety, sensing, industrial components and configured-to-order products.
+    end_markets: Shared across segments; discrete (automotive incl. EV and battery, semiconductor, e-commerce and warehouse automation), hybrid (food and beverage, household and personal care, life sciences) and process (energy, mining, chemicals).
+  - name: Software & Control
+    sells: Control and visualization software and hardware, digital twin, simulation and information software, and network and security infrastructure.
+    end_markets: Same discrete, hybrid and process end markets as other segments.
+  - name: Lifecycle Services
+    sells: Digital consulting, professional services including engineered-to-order solutions, and recurring services (cybersecurity, safety, remote monitoring, asset management); formerly included the Sensia joint venture, dissolved April 1, 2026.
+    end_markets: Same discrete, hybrid and process end markets; revenue mostly recognized over time from solutions and services.
+geography:
+  summary: Sales outside the U.S. were less than half of fiscal 2026 sales; U.S. sales were $5,381 million in 2026. Largest non-U.S. markets are Canada, China, Italy, the United Kingdom and Mexico.
+  evidence:
+    - quote: "In 2026, sales to customers outside the U.S. accounted for less than half of our total sales."
+    - quote: "We do business in more than 100 countries around the world. The largest sales outside the United States on a country of destination basis are in Canada, China, Italy, the United Kingdom, and Mexico."
+    - quote: "Sales in North America include $ 5,381 million, $ 4,847 million, and $ 4,612 million related to the U.S. in 2026, 2025, and 2024, respectively."
+customers:
+  summary: Manufacturers across discrete, hybrid and process industries. In most countries ROK sells primarily through independent distributors plus a direct sales force; large systems and services go mainly through the direct sales force.
+  concentration: Each of the three largest distributors about 10% of 2026 total sales, about 30% combined (all three operating segments).
+  evidence:
+    - quote: "In most countries, we sell primarily through independent distributors in conjunction with our direct sales force."
+    - quote: "Sales to each of our three largest distributors represented approximately 10 percent of our total sales in 2026, and collectively, sales to these three distributors represented approximately 30 percent of our total sales."
+    - quote: "Major markets served by all segments consist of discrete end markets (e.g., Automotive including Electric Vehicle and Battery, Semiconductor, and e-Commerce & Warehouse Automation)"
+backlog:
+  measure: remaining performance obligations
+  latest: About $1,370 million at September 30, 2026.
+  horizon: About $785 million expected to be recognized over the next 12 months; remainder thereafter.
+  summary: Only remaining performance obligations are reported, excluding contracts of one year or less and contracts billed as performed, so it covers a small part of annual sales.
+  evidence:
+    - quote: "As of September 30, 2026, we expect to recognize approximately $ 1,370 million of revenue in future periods from unfulfilled performance obligations from existing contracts with customers."
+    - quote: "We expect to recognize revenue of approximately $ 785 million from our remaining performance obligations over the next 12 months with the remaining balance recognized thereafter."
+    - quote: "We have applied the practical expedient to exclude the value of remaining performance obligations for (i) contracts with an original term of one year or less"
+pricing:
+  summary: ROK manages tariff costs through pricing and supply chain actions and expects them to mostly offset tariff costs, but recovery can lag. Fiscal 2026 results include price realization, an $85 million sales reduction for a customer refund program tied to IEEPA tariff price increases, and IEEPA tariff refunds received.
+  evidence:
+    - quote: "We continue to manage the impact of tariffs through pricing and other supply chain actions, including the use of alternative sources of materials and redundant manufacturing locations."
+    - quote: "In September 2026, we approved and communicated a refund program for customers who paid price increases on purchases of products that were impacted by IEEPA tariffs."
+    - quote: "We estimated the expected value of tariff refunds to be issued to customers under the refund program and recognized an accrual of $ 85 million as a reduction of sales in the Consolidated Statement of Operations for the year ended September 30, 2026."
+margin_drivers:
+  summary: Enterprise operating margin rose to 22.2% in fiscal 2026 from 18.9% on higher volume, price realization, favorable mix, productivity and net IEEPA tariff refund items, partly offset by higher compensation. Intelligent Devices segment margin rose to 20.0% from 18.0%.
+  evidence:
+    - quote: "Enterprise operating margin was 22.2 percent in 2026 compared to 18.9 percent in 2025."
+    - quote: "The increases were primarily due to higher sales volume, price realization, favorable mix, productivity, and the net impact of IEEPA tariff refund related items, partially offset by higher compensation."
+    - quote: "Segment operating margin increased to 20.0 percent in 2026 from 18.0 percent in 2025, primarily due to higher sales volume, productivity, and favorable mix, partially offset by higher compensation."

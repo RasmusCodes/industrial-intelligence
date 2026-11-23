@@ -1,0 +1,50 @@
+ticker: ETN
+document: ETN_10-K_2026-02-26.txt
+description: Eaton makes electrical products and systems, aerospace fluid and filtration systems, and vehicle and eMobility components for data center, utility, industrial, commercial, residential, aerospace and mobility markets.
+segments:
+  - name: Electrical Americas
+    sells: Electrical and industrial components, power distribution and assemblies, power quality, wiring devices, circuit protection, utility power distribution and services, primarily produced and sold in North and South America
+    end_markets: Data center, utility, industrial, commercial and residential
+  - name: Electrical Global
+    sells: Similar electrical and industrial components, power distribution, power quality and services, produced and sold primarily outside North and South America, plus hazardous duty electrical equipment
+    end_markets: Data center, utility, industrial, commercial outside the Americas
+  - name: Aerospace
+    sells: Aerospace fuel, hydraulics and pneumatic systems for commercial and military use, and filtration systems for industrial applications
+    end_markets: Commercial and military aircraft manufacturers and aftermarket customers
+  - name: Vehicle
+    sells: Drivetrains, powertrain systems and critical components for cars, light trucks and commercial vehicles
+    end_markets: Automotive, commercial vehicle, aftermarket and off-road (to be combined with eMobility as Mobility, with a spin-off announced for 2027)
+  - name: eMobility
+    sells: Mechanical, electrical and electronic components and systems for power management in on-road and off-road vehicles
+    end_markets: Vehicle OEMs
+geography:
+  summary: Net sales are measured by destination. In 2025 the United States was $17,122 million of $27,448 million total, with Europe $5,078 million, Asia Pacific $2,704 million, Latin America $1,461 million and Canada $1,083 million (per the geographic table).
+  evidence:
+    - quote: "Net sales are measured based on the geographic destination of sales."
+    - quote: "services that are primarily produced and sold in North and South America."
+customers:
+  summary: Sales go through distributors, resellers and manufacturers representatives and directly to OEMs, utilities and other end users.
+  concentration: "No single customer represented greater than 10% of net sales in 2025, 2024 or 2023"
+  evidence:
+    - quote: "A significant portion of open orders placed with Eaton are by customers of electrical products and electrical system and services, original equipment manufacturers or distributors."
+    - quote: "No single customer represented greater than 10% of net sales in 2025, 2024 or 2023, respectively."
+backlog:
+  measure: backlog
+  latest: "approximately $19.8 billion at December 31, 2025"
+  horizon: "approximately 69% targeted for delivery in the next twelve months"
+  summary: Backlog counts only orders to which customers are firmly committed; about 69% is targeted for delivery within twelve months.
+  evidence:
+    - quote: "Using this criterion, total backlog at December 31, 2025 was approximately $ 19.8 billion."
+    - quote: "At December 31, 2025, approximately 69 % of this backlog is targeted for delivery to customers in the next twelve months and the rest thereafter."
+    - quote: "In measuring backlog of unsatisfied or partially satisfied obligations, only the amount of orders to which customers are firmly committed are included."
+pricing:
+  summary: The filing does not quantify price effects in the text searched. It says suppliers are raising prices and that Eaton tries to recoup costs through pricing, but price increases could hurt market share or distributor relationships.
+  evidence:
+    - quote: "Some of our suppliers have experienced the same conditions and, in response, have continued to increase their prices in response to increases in their costs of raw materials, energy, and/or labor."
+    - quote: "In addition, our responses to mitigate the impact of these conditions, such as potential price increases, could negatively impact our market share or relationships with distributors or customers."
+margin_drivers:
+  summary: Gross margin fell to 37.6% in 2025 from 38.2%, with a 280 bp drag from commodity and wage inflation and 50 bp from acquisition and divestiture charges, offset by a 260 bp benefit from higher sales (volume leverage).
+  evidence:
+    - quote: "Gross profit margin decreased from 38.2% in 2024 to 37.6% in 2025."
+    - quote: "Material factors affecting this decrease were a 280 basis point decline from higher commodity and wage inflation and a 50 basis point decline from higher acquisition and divestiture charges, partially offset by a 260 basis point increase from higher sales."
+    - quote: "Labor shortages persist broadly in select markets, and shortages of certain raw materials have continued to affect the prices that our businesses are charged, particularly commodities."

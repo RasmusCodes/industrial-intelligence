@@ -1,0 +1,71 @@
+# Companies the platform covers.
+#
+# targets           companies whose fundamentals are modelled (SEC filers with quarterly XBRL)
+# annual_only       SEC filers with annual XBRL only (foreign private issuers on Form 20-F)
+# mapping_only      not SEC registrants: documented in the mapping database, no automated financials
+# indicator_panels  companies whose own filings are used as operational indicators (customers' capex)
+#
+# sector keys: dc = data center infrastructure, grid = electrical equipment and grid, power = power generation,
+# machinery = heavy machinery, construction = construction and engineering services, semicap = semiconductor
+# equipment, automation = industrial automation.
+
+targets:
+  - {ticker: CAT,  cik: 18230,   name: Caterpillar Inc.,              sectors: [machinery, power]}
+  - {ticker: VRT,  cik: 1674101, name: Vertiv Holdings Co,            sectors: [dc]}
+  - {ticker: ETN,  cik: 1551182, name: Eaton Corporation plc,         sectors: [grid, dc]}
+  - {ticker: GEV,  cik: 1996810, name: GE Vernova Inc.,               sectors: [power, grid]}
+  - {ticker: PWR,  cik: 1050915, name: Quanta Services Inc.,          sectors: [construction, grid]}
+  - {ticker: BE,   cik: 1664703, name: Bloom Energy Corporation,      sectors: [power, dc]}
+  - {ticker: HUBB, cik: 48898,   name: Hubbell Incorporated,          sectors: [grid]}
+  - {ticker: POWL, cik: 80420,   name: Powell Industries Inc.,        sectors: [grid, dc]}
+  - {ticker: MOD,  cik: 67347,   name: Modine (Modexus Solutions),    sectors: [dc]}
+  - {ticker: NVT,  cik: 1720635, name: nVent Electric plc,            sectors: [grid, dc]}
+  - {ticker: CMI,  cik: 26172,   name: Cummins Inc.,                  sectors: [machinery, power]}
+  - {ticker: URI,  cik: 1067701, name: United Rentals Inc.,           sectors: [machinery, construction]}
+  - {ticker: MTZ,  cik: 15615,   name: MasTec Inc.,                   sectors: [construction, grid]}
+  - {ticker: ROK,  cik: 1024478, name: Rockwell Automation Inc.,      sectors: [automation]}
+  - {ticker: AMAT, cik: 6951,    name: Applied Materials Inc.,        sectors: [semicap]}
+  - {ticker: LRCX, cik: 707549,  name: Lam Research Corporation,      sectors: [semicap]}
+  - {ticker: KLAC, cik: 319201,  name: KLA Corporation,               sectors: [semicap]}
+
+annual_only:
+  - {ticker: ABBNY, cik: 1091587, name: ABB Ltd,                      sectors: [grid, automation, dc]}
+
+mapping_only:
+  - {ticker: ENR.DE, name: Siemens Energy AG,  sectors: [power, grid], listing: Frankfurt}
+  - {ticker: SU.PA,  name: Schneider Electric SE, sectors: [grid, dc, automation], listing: Euronext Paris}
+
+indicator_panels:
+  hyperscalers:
+    description: Large US cloud operators; their capital expenditure funds most data center construction.
+    members:
+      - {ticker: MSFT,  cik: 789019}
+      - {ticker: GOOGL, cik: 1652044}
+      - {ticker: AMZN,  cik: 1018724}
+      - {ticker: META,  cik: 1326801}
+  utilities:
+    description: Twenty-two large US investor-owned utility holding companies; their capital expenditure
+      funds transmission, distribution and generation equipment and construction.
+    members:
+      - {ticker: NEE,  cik: 753308}
+      - {ticker: DUK,  cik: 1326160}
+      - {ticker: SO,   cik: 92122}
+      - {ticker: D,    cik: 715957}
+      - {ticker: AEP,  cik: 4904}
+      - {ticker: EXC,  cik: 1109357}
+      - {ticker: XEL,  cik: 72903}
+      - {ticker: ED,   cik: 1047862}
+      - {ticker: PCG,  cik: 1004980}
+      - {ticker: EIX,  cik: 827052}
+      - {ticker: SRE,  cik: 1032208}
+      - {ticker: ETR,  cik: 65984}
+      - {ticker: DTE,  cik: 936340}
+      - {ticker: PEG,  cik: 788784}
+      - {ticker: WEC,  cik: 783325}
+      - {ticker: FE,   cik: 1031296}
+      - {ticker: PPL,  cik: 922224}
+      - {ticker: AEE,  cik: 1002910}
+      - {ticker: CMS,  cik: 811156}
+      - {ticker: CNP,  cik: 1130310}
+      - {ticker: ES,   cik: 72741}
+      - {ticker: EVRG, cik: 1711269}

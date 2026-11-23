@@ -1,0 +1,38 @@
+ticker: BE
+document: BE_10-K_2026-02-09.txt
+description: Bloom Energy manufactures solid oxide fuel cell Energy Servers that generate on-site electricity, plus electrolyzers for hydrogen, selling to financiers, strategic partners, distributors and end customers with a focus on data centers and critical operations.
+segments:
+  - name: Bloom Energy (single reportable segment)
+    sells: Bloom Energy Server fuel cell systems, installation, operations and maintenance services, electricity under power purchase agreements, and the Bloom Electrolyzer
+    end_markets: Data centers and AI infrastructure, utilities and industrial or commercial customers needing resilient distributed power
+geography:
+  summary: Heavily US-weighted (81% of 2025 revenue, up from 74% in 2024 and 70% in 2023). South Korea is the second-largest market through distribution partnerships; Europe and Asia are small but growing.
+  evidence:
+    - quote: "In the years ended December 31, 2025, 2024 and 2023, total revenue in the U.S. was 81 %, 74 % and 70 %, respectively, of our total revenue."
+    - quote: "South Korea is our second-largest market, where we began commercial operations in 2018 and have grown our footprint to nearly 682 MW of deployed systems, supported by distribution partnerships with SK ecoplant Co., Ltd. and SK eternix Co., Ltd."
+customers:
+  summary: Sells to financiers, strategic partners, distributors and direct end users. Revenue is highly concentrated, including a related party customer; a 2025 Brookfield partnership provides project financing for AI infrastructure.
+  concentration: "Three customers/distributors were about 43%, 13% and 12% of 2025 total revenue (the first is a related party)"
+  evidence:
+    - quote: "We sell to financiers, strategic partners, distributors and directly to end user customers, all of whom we consider to be a customer."
+    - quote: "During the year ended December 31, 2025, revenue from three of these customers and distributors, the first of which is related party, accounted for approximately 43%, 13% and 12% of our total revenue."
+    - quote: "In August 2025, we entered into a strategic partnership with Brookfield to support the long-term growth of our fuel cell business and accelerate deployment of clean energy solutions with a focus on powering AI infrastructure."
+backlog:
+  measure: backlog
+  latest: not disclosed
+  horizon: not disclosed
+  summary: The filing defines product backlog and service backlog but the text searched gives no dollar amount or timing; it notes that deploying backlog depends on securing project financing.
+  evidence:
+    - quote: "We view product backlog as the revenue attributable to existing contractual commitments for the purchase or use of Energy Servers by a financier or an end customer in the future."
+    - quote: "Additionally, our ability to deploy our backlog is directly tied to our ability to secure project financing, which is often an unpredictable process."
+pricing:
+  summary: Customer pricing is not discussed in detail. The filing describes multi-year supply agreements for pricing stability, past raw material price increases, fixed-price installation risk and tariff mitigation initiatives.
+  evidence:
+    - quote: "We have multi-year supply agreements with some of our supply partners for supply continuity and pricing stability."
+    - quote: "We have enacted multiple initiatives to mitigate the impact of trade tariffs and other trade protection measures to our cost and supply availability."
+    - quote: "Our financial results depend on the execution of customer projects and the timely installation of our products, which may be on a fixed price basis, subjecting us to the risk of cost overruns or other unforeseen expenses in the installation process."
+margin_drivers:
+  summary: Total gross margin was 29% in 2025 vs 27% in 2024 (product 35% vs 37%; service 10% vs minus 1%; electricity 46% vs 26%). Gross profit growth was driven by product demand tied to a hyperscaler project and service improvement; tariffs were not material to gross margin in 2025.
+  evidence:
+    - quote: "The increase was predominantly driven by (1) a $139.1 million increase in product gross profit, (2) a $24.3 million improvement in service gross profit (loss)"
+    - quote: "for fiscal year 2025 the impact of tariffs on our gross margin was not material and currently we do not believe such impacts will be material for fiscal year 2026"

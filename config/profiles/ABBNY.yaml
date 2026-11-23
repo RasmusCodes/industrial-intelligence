@@ -1,0 +1,49 @@
+ticker: ABBNY
+document: ABBNY_20-F_2024-02-23.txt
+description: ABB Ltd is a Swiss technology company in electrification and automation, selling electrical products and systems, motors and drives, process automation systems and services, and robotics to industrial, commercial and utility customers worldwide. Document is the Form 20-F for fiscal 2023.
+segments:
+  - name: Electrification
+    sells: Electrical products and systems for connection, protection and distribution of power (Installation Products, Distribution Solutions, Smart Power, Smart Buildings divisions); revenues $14,584 million in 2023.
+    end_markets: Utilities, businesses, commercial and residential construction; about two-thirds of orders are short-cycle products.
+  - name: Motion
+    sells: Drives, programmable logic controllers, low voltage and large motors and generators, system drives and traction; revenues $7,814 million in 2023.
+    end_markets: Industry and infrastructure customers; strong growth in long-cycle process-related segments such as chemical, oil and gas, cement, mining and minerals.
+  - name: Process Automation
+    sells: Integrated automation, electrical and digital systems and services; about half solutions for new and brownfield projects and half service for the installed base; revenues $6,270 million in 2023.
+    end_markets: Process, hybrid and maritime industries (mining, metals, cement, pulp and paper, marine and ports, oil and gas).
+  - name: Robotics & Discrete Automation
+    sells: Robots, autonomous mobile robots, robotics application cells, machine automation, software and services; revenues $3,640 million in 2023.
+    end_markets: Discrete manufacturing including automotive; orders fell 26% in 2023 as order patterns normalized.
+geography:
+  summary: The United States and China are the only countries with more than 10% of revenue in 2023, 2022 and 2021. Revenue by region is reported as Europe, the Americas and Asia, Middle East and Africa.
+  evidence:
+    - quote: "Revenues by geography reflect the location of the customer. In 2023, 2022 and 2021 the United States and China are the only countries where revenue exceeded 10 percent of total revenues."
+    - quote: "Our exposure to customers is geographically balanced while catering to multiple end-markets and segments."
+customers:
+  summary: A wide range of industrial, commercial and utility customers and government agencies; 2023 order momentum was strongest in systems and projects driven by utilities, data centers and process industries. Customers consolidating could exert pricing pressure.
+  concentration: not disclosed
+  evidence:
+    - quote: "order momentum was strongest in the systems- and project- related businesses, driven predominantly by utilities and datacenters as well as process-related industries."
+    - quote: "The Process Automation Business area provides a comprehensive range of integrated automation, electrical and digital systems and services for customers in the process, hybrid and maritime industries."
+    - quote: "as our customers become larger and more concentrated, they could exert pricing pressure on all suppliers, including us"
+backlog:
+  measure: backlog
+  latest: Total order backlog $21,567 million at December 31, 2023 (Electrification $6,808 million, Motion $5,343 million, Process Automation $7,519 million, Robotics & Discrete Automation $2,141 million).
+  horizon: not disclosed
+  summary: Backlog rose 9% in 2023 (7% in local currencies), increasing in all business areas except Robotics & Discrete Automation. ABB treats order backlog as its unsatisfied performance obligations.
+  evidence:
+    - quote: "The undiscounted value of future revenues we expect to generate from our orders at any point in time is represented by our order backlog."
+    - quote: "At December 31, 2023, consolidated order backlog was 9 percent higher (7 percent in local currencies) compared to December 31, 2022."
+    - quote: "The Company considers its order backlog to represent its unsatisfied performance obligations."
+pricing:
+  summary: Pricing actions to offset material, labor and transportation inflation accounted for almost half of Electrification revenue growth in 2023 and around three quarters in 2022; some contracts carry raw-material price escalation clauses, and ABB cannot always pass costs on.
+  evidence:
+    - quote: "Pricing actions taken to mitigate increasing material, labor and transportation costs again contributed strongly to the higher revenue level and accounted for almost half of the revenue growth in 2023"
+    - quote: "in some cases we can reduce this risk by incorporating changes in raw materials prices into the prices of our end products (through price escalation clauses)"
+    - quote: "All Business areas reported revenue growth, with both increased volumes and product prices."
+margin_drivers:
+  summary: Motion and Electrification profit gains in 2023 came from volume, backlog execution and pricing that more than offset labor and material inflation; Process Automation also cites favorable mix and project execution. E-mobility losses included inventory charges.
+  evidence:
+    - quote: "The increase was driven by higher revenues reflecting a strong demand, solid order backlog execution and benefits from a strong price execution which more than offset cost inflation related to labor and materials."
+    - quote: "Growth was driven by higher revenue volumes, continued operational improvements in project execution and a favorable business mix."
+    - quote: "including the mandatory target to make annual productivity improvements of at least 3-5 percent each year"

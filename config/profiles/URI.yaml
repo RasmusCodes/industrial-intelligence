@@ -1,0 +1,42 @@
+ticker: URI
+document: URI_10-K_2026-01-28.txt
+description: United Rentals is the largest equipment rental company in North America, renting general construction and industrial equipment plus specialty equipment (trench safety, power and HVAC, fluid solutions, mobile storage), and selling new and used equipment and contractor supplies. Customers range from Fortune 500 companies to small businesses and homeowners.
+segments:
+  - name: General rentals
+    sells: Rental of general construction and industrial equipment, aerial work platforms, and general tools and light equipment, plus related services.
+    end_markets: Construction and industrial companies, manufacturers, utilities, municipalities, homeowners and government entities; operates throughout the United States and Canada; 68% of 2025 revenue.
+  - name: Specialty
+    sells: Rental of trench safety equipment, power and HVAC equipment, fluid solutions equipment, mobile storage and modular office space, and surface protection mats, with setup and other services.
+    end_markets: Construction companies on infrastructure projects, municipalities and industrial companies; primarily United States and Canada with a smaller presence in Europe, Australia and New Zealand; 31.7% of 2025 revenue.
+geography:
+  summary: Revenue is overwhelmingly U.S. (91% in 2025); the company primarily operates in the United States and Canada with a smaller presence in Europe, Australia and New Zealand.
+  evidence:
+    - quote: "The majority of our revenue is recognized in our general rentals segment and in the U.S. (for the year ended December 31, 2025, 68 percent and 91 percent, respectively)."
+    - quote: "We primarily operate in the United States and Canada, and have a smaller presence in Europe, Australia and New Zealand."
+customers:
+  summary: Highly diversified customer base across construction and industrial end markets; equipment is rented through a branch network supported by a national account sales force and an online rental platform. Credit concentration is low.
+  concentration: Largest customer one percent or less of total revenues in each of 2025, 2024 and 2023; largest receivable about two percent of total receivables.
+  evidence:
+    - quote: "Our customer base is highly diversified and ranges from Fortune 500 companies to small businesses and homeowners."
+    - quote: "Our largest customer accounted for one percent or less of total revenues in each of 2025, 2024 and 2023."
+    - quote: "We rent equipment to a diverse customer base that includes construction and industrial companies, manufacturers, utilities, municipalities, homeowners and government entities."
+backlog:
+  measure: not disclosed
+  latest: not disclosed
+  horizon: not disclosed
+  summary: The 10-K does not report a backlog or remaining performance obligations. The only forward-looking balance is deferred revenue of $175 million at December 31, 2025 ($185 million in 2024).
+  evidence:
+    - quote: "We had deferred revenue (associated with both Topic 842 and Topic 606) of $ 175 and $ 185 as of December 31, 2025 and 2024, respectively."
+    - quote: "We record amounts billed to customers in excess of recognizable revenue as deferred revenue on our balance sheet."
+pricing:
+  summary: Rental pricing shows up in fleet productivity, which combines rental rates, time utilization and mix (up 2.2% in 2025, 2.0% pro forma for Yak). Part of inflationary cost increases, mainly fuel and delivery, is passed on to customers, and tariffs could raise costs beyond what is recovered.
+  evidence:
+    - quote: "fleet productivity is a comprehensive metric that reflects the combined impact of changes in rental rates, time utilization, and mix that contribute to the variance in owned equipment rental revenue."
+    - quote: "Equipment rentals increased 6.0 percent, primarily due to a 2.2 percent increase in fleet productivity, which includes the impact of the Yak acquisition, and a 3.9 percent increase in average OEC."
+    - quote: "A portion of inflationary cost increases is passed on to customers. The most significant cost increases that are passed on to customers are for fuel and delivery, and there are other costs for which the pass through to customers is less direct"
+margin_drivers:
+  summary: 2025 gross margin fell 190 basis points to 38.2%, mainly from specialty equipment rentals (higher depreciation including Yak, inflation and delivery costs, more lower-margin ancillary revenue) and from weaker used-equipment sales margins as that market normalized.
+  evidence:
+    - quote: "2025 gross margin of 38.2 percent decreased 190 basis points from 2024."
+    - quote: "Gross margin decreased primarily due to 1) increased depreciation expense, including the impact of the Yak acquisition and growth in the acquired Yak locations, 2) inflation and normal cost variability, particularly in delivery costs"
+    - quote: "Gross margin from sales of rental equipment decreased 180 basis points from 2024, which primarily reflected the normalization of the used equipment market, including pricing."

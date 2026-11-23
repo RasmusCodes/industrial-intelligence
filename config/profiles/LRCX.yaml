@@ -1,0 +1,39 @@
+ticker: LRCX
+document: LRCX_10-K_2026-08-07.txt
+description: Lam Research makes wafer processing equipment (deposition, etch, clean) and sells customer support products and services (spares, upgrades, service) to semiconductor manufacturers. Fiscal 2026 ended June 28, 2026.
+segments:
+  - name: Wafer processing semiconductor manufacturing equipment (single reportable segment)
+    sells: Deposition, etch and clean systems, plus customer support products and services (spares, upgrades, service, refurbished non-leading edge Reliant products); systems revenue $14.9 billion and customer support-related revenue $8.3 billion in fiscal 2026.
+    end_markets: Leading semiconductor manufacturers in foundry and memory; fiscal 2026 growth driven by AI-related spending, particularly foundry customers.
+geography:
+  summary: Non-U.S. sales were about 93% of revenue in fiscal 2026. By region of customer facility, fiscal 2026 revenue was China 34%, Taiwan 22%, Korea 19%, Japan 9%, United States 7%, Southeast Asia 6% and Europe 3%.
+  evidence:
+    - quote: "Non-U.S. sales accounted for approximately 93% of total revenue in each of the fiscal years 2026, 2025, and 2024."
+    - quote: "The Company operates in seven geographic regions: United States, China, Europe, Japan, Korea, Southeast Asia, and Taiwan."
+customers:
+  summary: Leading semiconductor manufacturers, concentrated in a few large memory and foundry customers. The filing does not describe the sales channel in the evidence pack.
+  concentration: Four customers about 16%, 15%, 12% and 12% of fiscal 2026 revenue; two customers about 17% and 15% in fiscal 2025.
+  evidence:
+    - quote: "Our most significant customers during the fiscal years ending June 28, 2026, June 29, 2025, and June 30, 2024 included Micron Technology, Inc., Samsung Electronics Company, Ltd., SK hynix Inc., and Taiwan Semiconductor Manufacturing Company."
+    - quote: "In fiscal year 2026, four customers accounted for approximately 16 %, 15 %, 12 %, and 12 % of total revenues, respectively."
+    - quote: "Sales to a limited number of large customers constitute a significant portion of our overall shipments, revenue, cash flows, and profitability."
+backlog:
+  measure: not disclosed
+  latest: not disclosed
+  horizon: not disclosed
+  summary: The 10-K does not report a backlog or remaining performance obligations. It reports deferred revenue of $2.43 billion at June 28, 2026 (down from $2.68 billion) from customer down payments and system credits.
+  evidence:
+    - quote: "The deferred revenue balance decreased to $2.43 billion as of June 28, 2026 compared to $2.68 billion as of June 29, 2025 primarily due a decrease in customer down payments, partially offset by an increase in earned system credits."
+    - quote: "We generally invoice customers at shipment and for professional services as provided."
+pricing:
+  summary: Large customers may negotiate lower pricing and margins, and variable consideration includes discounts and credits under volume purchase agreements. The company is trying to pass some cost increases to customers, which may not succeed.
+  evidence:
+    - quote: "large customers may be able to negotiate requirements that result in decreased pricing, increased costs, and/or lower margins for us"
+    - quote: "variable consideration includes estimates for discounts and credits for future usage which are based on contractual terms outlined in volume purchase agreements and other factors known at the time."
+    - quote: "Although we are endeavoring to pass along some of the impact of increased costs to our customers to counteract adverse impacts to our gross margins and other results of operations, such measures could be unsuccessful"
+margin_drivers:
+  summary: Fiscal 2026 gross margin rose on favorable customer mix, partly offset by aluminum and steel tariff-related spend; supply chain cost increases and tariffs are flagged as profitability pressures.
+  evidence:
+    - quote: "Gross margin as a percentage of revenue increased in fiscal year 2026 compared to fiscal year 2025 largely due to favorable customer mix, partially offset by aluminum and steel tariff-related spend."
+    - quote: "our business requires steel and aluminum to manufacture our products, and the imposition of tariffs on steel and aluminum imports into the United States increased our manufacturing costs in fiscal year 2026, which adversely impacted our margins."
+    - quote: "supply chain cost increases, tariffs, and other inflationary pressures have impacted and may continue to impact our profitability;"

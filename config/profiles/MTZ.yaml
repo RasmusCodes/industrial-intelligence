@@ -1,0 +1,54 @@
+ticker: MTZ
+document: MTZ_10-K_2026-02-26.txt
+description: MasTec is a North American infrastructure contractor providing engineering, construction, installation and maintenance for communications, power delivery, clean energy and pipeline customers. Much of its work is under multi-year master service agreements; the rest is project-based.
+segments:
+  - name: Communications
+    sells: Engineering, construction, maintenance and customer fulfillment for wireless and wireline/fiber networks, data center buildout and interconnection, and install-to-the-home services.
+    end_markets: Communications and digital infrastructure customers; demand tied to fiber expansion, wireless densification and broadband deployment.
+  - name: Clean Energy and Infrastructure
+    sells: Installation and construction of power generation facilities (wind, solar, biomass, natural gas, hydrogen), battery storage, heavy civil and industrial infrastructure, and environmental remediation.
+    end_markets: Energy, utility, government and other end markets; segment revenue about $4.7 billion in 2025.
+  - name: Power Delivery
+    sells: Engineering, construction and maintenance of transmission and distribution infrastructure, substations, grid modernization and emergency restoration.
+    end_markets: Energy, utility and data center infrastructure industries; driven by electricity demand growth, grid reliability and aging grid.
+  - name: Pipeline Infrastructure
+    sells: Construction, maintenance and integrity services for natural gas, water, wastewater and carbon capture sequestration pipelines.
+    end_markets: Energy and utility customers; demand sensitive to oil and gas activity and industrial and utility demand.
+  - name: Other
+    sells: Certain equity investees and small business units with activities in international end markets.
+    end_markets: International end markets; not a primary segment.
+geography:
+  summary: Revenue is primarily from North America; international revenue is a small portion, with foreign operations primarily in Canada.
+  evidence:
+    - quote: "We derive a small portion of our revenue from international markets."
+    - quote: "Our foreign operations are presently conducted primarily in Canada, but we have performed work in various other foreign countries in the past and may expand our foreign operations in the future."
+    - quote: "All five reportable segments derive their revenue primarily from the engineering, installation and maintenance of infrastructure, primarily in North America."
+customers:
+  summary: About 1,800 customers, including large communications, utility, power and pipeline companies, with work won mostly through bids. Master service and other service agreements (generally multi-year, cancelable on short notice) were 44% of 2025 revenue.
+  concentration: Top ten customers 34% of 2025 revenue (35% in 2024, 38% in 2023); one customer about 10% of net accounts receivable at December 31, 2025; no single-customer revenue percentage in the evidence pack.
+  evidence:
+    - quote: "The Company had approximately 1,800 customers for the year ended December 31, 2025."
+    - quote: "For the years ended December 31, 2025, 2024 and 2023, the Company derived 34 %, 35 % and 38 %, respectively, of its revenue from its top ten customers."
+    - quote: "For the years ended December 31, 2025, 2024 and 2023, revenue derived from projects performed under master service and other service agreements totaled 44%, 41% and 40%, respectively, of consolidated revenue."
+backlog:
+  measure: both
+  latest: 18-month estimated backlog $18,963 million at December 31, 2025; remaining performance obligations $14.6 billion at December 31, 2025.
+  horizon: About 74% of year-end 2025 backlog expected to be realized in 2026; about $9.3 billion, or 63.7%, of remaining performance obligations expected in 2026.
+  summary: Backlog covers 18 months and includes master service agreement estimates, so it exceeds remaining performance obligations; 47% of backlog is under MSAs that carry no minimum purchase commitment.
+  evidence:
+    - quote: "Estimated backlog represents the amount of revenue we expect to realize over the next 18 months from future work on uncompleted construction contracts, including new contracts under which work has not begun, as well as revenue from change orders and renewal options."
+    - quote: "we anticipate that we will realize approximately 74% of our estimated year-end 2025 backlog in 2026."
+    - quote: "Based on current expectations, the Company anticipates it will recognize approximately $ 9.3 billion, or 63.7 %, of its remaining performance obligations as revenue during 2026"
+    - quote: "As of December 31, 2025, 47% of our backlog is estimated to be attributable to amounts under master service or other service agreements, pursuant to which our customers are not contractually committed to purchase a minimum amount of services."
+pricing:
+  summary: Customers award most work through bids where price is often a principal factor; much revenue is fixed price or per unit, so cost overruns hit margins. Inflation in labor, materials and fuel hurts profitability to the extent costs cannot be passed through.
+  evidence:
+    - quote: "they award most of their work through a bid process, and price is often a principal factor in determining which service provider is selected."
+    - quote: "We derive a significant portion of our revenue from fixed price master service and other service agreements."
+    - quote: "Elevated levels of labor, fuel and material costs have in the past and could in the future negatively affect our project margins to the extent that we are unable to pass such cost increases along to our customers."
+margin_drivers:
+  summary: Cost of revenue rose to 87.5% of revenue in 2025 from 86.8% on reduced project efficiencies and mix in Pipeline Infrastructure and Power Delivery, partly offset by better productivity in Clean Energy and Infrastructure. The filing also names job productivity, weather, labor and material costs, and geographic mix.
+  evidence:
+    - quote: "Costs of revenue, excluding depreciation and amortization, as a percentage of revenue increased by approximately 70 basis points to 87.5% of revenue in 2025 compared to 86.8% of revenue in 2024."
+    - quote: "The basis point increase was due to a combination of reduced project efficiencies and project mix, primarily within our Pipeline Infrastructure and Power Delivery segments"
+    - quote: "Overall project margins may fluctuate due to project pricing and job conditions, changes in the cost of labor and materials, crew availability, job productivity and work volume."
