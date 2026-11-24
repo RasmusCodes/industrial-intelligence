@@ -45,7 +45,7 @@ def kpi_sentences(text: str, max_n: int = 3) -> list[str]:
     flat = re.sub(r"\s+", " ", text)
     out = []
     for m in KPI.finditer(flat):
-        s = m.group(0).strip()
+        s = re.sub(r"^\d{1,3}\s+(?=[A-Z])", "", m.group(0).strip())     # page numbers glued to the first word
         if 40 <= len(s) <= 400 and s not in out:
             out.append(s)
         if len(out) >= max_n:

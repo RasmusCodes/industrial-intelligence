@@ -25,7 +25,8 @@ def build() -> pd.DataFrame:
     pr = store.load("press_releases", missing_ok=True)
     for r in pr.itertuples(index=False):
         title = r.headline or f"8-K: {r.kind}"
-        ev.append({"ticker": r.ticker, "date": pd.Timestamp(r.date), "kind": "announcement" if r.items != "2.02" else "results",
+        is_results = "2.02" in str(r.items).split(",")
+        ev.append({"ticker": r.ticker, "date": pd.Timestamp(r.date), "kind": "results" if is_results else "announcement",
                    "title": title, "detail": r.kpi, "source": "SEC EDGAR 8-K", "url": r.url})
     fa = store.load("federal_awards", missing_ok=True)
     if not fa.empty:
