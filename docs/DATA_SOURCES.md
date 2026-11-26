@@ -47,6 +47,11 @@ The full registry (status, point-in-time treatment, content, terms) is generated
   the same `available_at` contract.
 * **Earnings-call transcripts** are not redistributable; company statements come from 8-K press releases and
   annual reports filed with the SEC.
+* **8-K press releases** (dashboard timeline only, no model uses them): the press-release exhibit is found under
+  any of the filers' naming styles (`ex99-1`, `exx991`, `kex99`, `…pressrelease`), and an exhibit without a
+  release body (slide decks, credit agreements, court filings) is not treated as one: such 8-Ks are shown with
+  their item title and first sentence. Headlines and backlog/order sentences are verbatim. Investor-relations
+  contact blocks are never used as text, and phone numbers and e-mail addresses are removed before storing.
 * **CRSP** (licensed through WRDS) is read from a local path for the excess-return tests only; no CRSP data is
   in the repository or on the dashboard.
 

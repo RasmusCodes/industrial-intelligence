@@ -12,6 +12,7 @@ from __future__ import annotations
 import pandas as pd
 
 from . import store
+from .sources.sec_releases import scrub
 
 TECH_FOR = {
     "GEV": ["gas_turbine", "wind"], "CAT": ["gas_turbine", "engine_fuelcell"], "CMI": ["engine_fuelcell"],
@@ -27,7 +28,7 @@ def build() -> pd.DataFrame:
         title = r.headline or f"8-K: {r.kind}"
         is_results = "2.02" in str(r.items).split(",")
         ev.append({"ticker": r.ticker, "date": pd.Timestamp(r.date), "kind": "results" if is_results else "announcement",
-                   "title": title, "detail": r.kpi, "source": "SEC EDGAR 8-K", "url": r.url})
+                   "title": title, "detail": r.kpi or getattr(r, "lead", ""), "source": "SEC EDGAR 8-K", "url": r.url})
     fa = store.load("federal_awards", missing_ok=True)
     if not fa.empty:
         fa = fa.sort_values("amount", ascending=False).groupby("ticker").head(25)
@@ -57,6 +58,8 @@ def build() -> pd.DataFrame:
                            "detail": f"TABS {r.ProjectNumber}; facility {r.FacilityName}",
                            "source": "TDLR TABS", "url": f"https://www.tdlr.texas.gov/TABS/Search/Project/{r.ProjectNumber}"})
     df = pd.DataFrame(ev).dropna(subset=["date"])
+    for col in ("title", "detail"):                     # no phone numbers or e-mail addresses in published text
+        df[col] = df[col].fillna("").astype(str).map(scrub)
     df["date"] = pd.to_datetime(df["date"]).dt.tz_localize(None) if getattr(pd.to_datetime(df["date"]).dt, "tz", None) else pd.to_datetime(df["date"])
     df = df.sort_values(["ticker", "date"], ascending=[True, False]).reset_index(drop=True)
     store.save("events", df)
