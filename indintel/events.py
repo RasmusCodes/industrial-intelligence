@@ -21,6 +21,15 @@ TECH_FOR = {
 DC_SUPPLIERS = {"VRT", "ETN", "MOD", "NVT", "POWL", "BE", "PWR", "HUBB"}
 
 
+def money(amount: float) -> str:
+    """$12.3m, $45k or $850: small federal orders read correctly instead of '$0.0m'."""
+    if amount >= 1e6:
+        return f"${amount / 1e6:,.1f}m"
+    if amount >= 1e3:
+        return f"${amount / 1e3:,.0f}k"
+    return f"${amount:,.0f}"
+
+
 def build() -> pd.DataFrame:
     ev = []
     pr = store.load("press_releases", missing_ok=True)
@@ -31,10 +40,10 @@ def build() -> pd.DataFrame:
                    "title": title, "detail": r.kpi or getattr(r, "lead", ""), "source": "SEC EDGAR 8-K", "url": r.url})
     fa = store.load("federal_awards", missing_ok=True)
     if not fa.empty:
-        fa = fa.sort_values("amount", ascending=False).groupby("ticker").head(25)
+        fa = fa[fa["amount"] > 0].sort_values("amount", ascending=False).groupby("ticker").head(25)
         for r in fa.itertuples(index=False):
             ev.append({"ticker": r.ticker, "date": pd.to_datetime(r.start, errors="coerce"), "kind": "contract",
-                       "title": f"Federal award ${r.amount / 1e6:,.1f}m from {r.sub_agency or r.agency}",
+                       "title": f"Federal award {money(r.amount)} from {r.sub_agency or r.agency}",
                        "detail": r.description, "source": "USAspending.gov", "url": r.url})
     pj = store.load("eia860m_projects", missing_ok=True)
     if not pj.empty:

@@ -82,6 +82,11 @@ def test_scrub_removes_phone_numbers_and_emails():
     assert sr.scrub("Backlog of $14.6 billion, up 3%.") == "Backlog of $14.6 billion, up 3%."
 
 
+def test_award_amounts_are_readable():
+    from indintel.events import money
+    assert [money(a) for a in (23_126_792.92, 35_429, 1_901.09, 850)] == ["$23.1m", "$35k", "$2k", "$850"]
+
+
 def test_form_lead_for_8k_without_press_release():
     paras = ["UNITED STATES SECURITIES AND EXCHANGE COMMISSION", "FORM 8-K",
              "Item 1.01. Entry into a Material Definitive Agreement.",
